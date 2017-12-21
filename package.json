@@ -7,6 +7,7 @@
     "gulp-delete-file": "^1.0.2",
     "gulp-jekyll": "^0.0.0",
     "gulp-jekyll-stream": "^1.0.1",
-    "gulp-util": "^3.0.8"
+    "gulp-util": "^3.0.8",
+    "gulp-zip": "^4.0.0"
   }
 }

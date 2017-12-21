@@ -1,614 +1,191 @@
-.highlight {
-  /* Comment */
-  /* Error */
-  /* Generic */
-  /* Keyword */
-  /* Literal */
-  /* Name */
-  /* Operator */
-  /* Other */
-  /* Punctuation */
-  /* Comment.Multiline */
-  /* Comment.Preproc */
-  /* Comment.Single */
-  /* Comment.Special */
-  /* Generic.Deleted */
-  /* Generic.Emph */
-  /* Generic.Error */
-  /* Generic.Heading */
-  /* Generic.Inserted */
-  /* Generic.Output, qualified with span to prevent applying this style to the Go language, see #1153. */
-  /* Generic.Prompt */
-  /* Generic.Strong */
-  /* Generic.Subheading */
-  /* Generic.Traceback */
-  /* Keyword.Constant */
-  /* Keyword.Declaration */
-  /* Keyword.Namespace */
-  /* Keyword.Pseudo */
-  /* Keyword.Reserved */
-  /* Keyword.Type */
-  /* Literal.Date */
-  /* Literal.Number */
-  /* Literal.String */
-  /* Name.Attribute */
-  /* Name.Builtin */
-  /* Name.Class */
-  /* Name.Constant */
-  /* Name.Decorator */
-  /* Name.Entity */
-  /* Name.Exception */
-  /* Name.Function */
-  /* Name.Label */
-  /* Name.Namespace */
-  /* Name.Other */
-  /* Name.Property */
-  /* Name.Tag */
-  /* Name.Variable */
-  /* Operator.Word */
-  /* Text.Whitespace */
-  /* Literal.Number.Float */
-  /* Literal.Number.Hex */
-  /* Literal.Number.Integer */
-  /* Literal.Number.Oct */
-  /* Literal.String.Backtick */
-  /* Literal.String.Char */
-  /* Literal.String.Doc */
-  /* Literal.String.Double */
-  /* Literal.String.Escape */
-  /* Literal.String.Heredoc */
-  /* Literal.String.Interpol */
-  /* Literal.String.Other */
-  /* Literal.String.Regex */
-  /* Literal.String.Single */
-  /* Literal.String.Symbol */
-  /* Name.Builtin.Pseudo */
-  /* Name.Variable.Class */
-  /* Name.Variable.Global */
-  /* Name.Variable.Instance */
-  /* Literal.Number.Integer.Long */ }
-  .highlight .hll {
-    background-color: #ffffcc; }
-  .highlight .c {
-    color: #87ceeb; }
-  .highlight .err {
-    color: #ffffff; }
-  .highlight .g {
-    color: #ffffff; }
-  .highlight .k {
-    color: #f0e68c; }
-  .highlight .l {
-    color: #ffffff; }
-  .highlight .n {
-    color: #ffffff; }
-  .highlight .o {
-    color: #ffffff; }
-  .highlight .x {
-    color: #ffffff; }
-  .highlight .p {
-    color: #ffffff; }
-  .highlight .cm {
-    color: #87ceeb; }
-  .highlight .cp {
-    color: #cd5c5c; }
-  .highlight .c1 {
-    color: #87ceeb; }
-  .highlight .cs {
-    color: #87ceeb; }
-  .highlight .gd {
-    color: #0000c0;
-    font-weight: bold;
-    background-color: #008080; }
-  .highlight .ge {
-    color: #c000c0;
-    text-decoration: underline; }
-  .highlight .gr {
-    color: #c0c0c0;
-    font-weight: bold;
-    background-color: #c00000; }
-  .highlight .gh {
-    color: #cd5c5c; }
-  .highlight .gi {
-    color: #ffffff;
-    background-color: #0000c0; }
-  .highlight span.go {
-    color: #add8e6;
-    font-weight: bold;
-    background-color: #4d4d4d; }
-  .highlight .gp {
-    color: #ffffff; }
-  .highlight .gs {
-    color: #ffffff; }
-  .highlight .gu {
-    color: #cd5c5c; }
-  .highlight .gt {
-    color: #c0c0c0;
-    font-weight: bold;
-    background-color: #c00000; }
-  .highlight .kc {
-    color: #f0e68c; }
-  .highlight .kd {
-    color: #f0e68c; }
-  .highlight .kn {
-    color: #f0e68c; }
-  .highlight .kp {
-    color: #f0e68c; }
-  .highlight .kr {
-    color: #f0e68c; }
-  .highlight .kt {
-    color: #bdb76b; }
-  .highlight .ld {
-    color: #ffffff; }
-  .highlight .m {
-    color: #EAB289; }
-  .highlight .s {
-    color: #EAB289; }
-  .highlight .na {
-    color: #8CF0E8; }
-  .highlight .nb {
-    color: #ffffff; }
-  .highlight .nc {
-    color: #ffffff; }
-  .highlight .no {
-    color: #ffa0a0; }
-  .highlight .nd {
-    color: #ffffff; }
-  .highlight .ni {
-    color: #ffdead; }
-  .highlight .ne {
-    color: #ffffff; }
-  .highlight .nf {
-    color: #ffffff; }
-  .highlight .nl {
-    color: #ffffff; }
-  .highlight .nn {
-    color: #ffffff; }
-  .highlight .nx {
-    color: #ffffff; }
-  .highlight .py {
-    color: #ffffff; }
-  .highlight .nt {
-    color: #f0e68c; }
-  .highlight .nv {
-    color: #98fb98; }
-  .highlight .ow {
-    color: #ffffff; }
-  .highlight .w {
-    color: #ffffff; }
-  .highlight .mf {
-    color: #ffffff; }
-  .highlight .mh {
-    color: #ffffff; }
-  .highlight .mi {
-    color: #ffffff; }
-  .highlight .mo {
-    color: #ffffff; }
-  .highlight .sb {
-    color: #ffffff; }
-  .highlight .sc {
-    color: #ffffff; }
-  .highlight .sd {
-    color: #ffffff; }
-  .highlight .s2 {
-    color: #ffffff; }
-  .highlight .se {
-    color: #ffffff; }
-  .highlight .sh {
-    color: #ffffff; }
-  .highlight .si {
-    color: #ffffff; }
-  .highlight .sx {
-    color: #ffffff; }
-  .highlight .sr {
-    color: #ffffff; }
-  .highlight .s1 {
-    color: #ffffff; }
-  .highlight .ss {
-    color: #ffffff; }
-  .highlight .bp {
-    color: #ffffff; }
-  .highlight .vc {
-    color: #98fb98; }
-  .highlight .vg {
-    color: #98fb98; }
-  .highlight .vi {
-    color: #98fb98; }
-  .highlight .il {
-    color: #ffffff; }
-  .highlight .bash .nv {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none; }
-  .language-bash .highlight .nb {
-    color: #99D4FF; }
+.highlight { /* Comment */ /* Error */ /* Generic */ /* Keyword */ /* Literal */ /* Name */ /* Operator */ /* Other */ /* Punctuation */ /* Comment.Multiline */ /* Comment.Preproc */ /* Comment.Single */ /* Comment.Special */ /* Generic.Deleted */ /* Generic.Emph */ /* Generic.Error */ /* Generic.Heading */ /* Generic.Inserted */ /* Generic.Output, qualified with span to prevent applying this style to the Go language, see #1153. */ /* Generic.Prompt */ /* Generic.Strong */ /* Generic.Subheading */ /* Generic.Traceback */ /* Keyword.Constant */ /* Keyword.Declaration */ /* Keyword.Namespace */ /* Keyword.Pseudo */ /* Keyword.Reserved */ /* Keyword.Type */ /* Literal.Date */ /* Literal.Number */ /* Literal.String */ /* Name.Attribute */ /* Name.Builtin */ /* Name.Class */ /* Name.Constant */ /* Name.Decorator */ /* Name.Entity */ /* Name.Exception */ /* Name.Function */ /* Name.Label */ /* Name.Namespace */ /* Name.Other */ /* Name.Property */ /* Name.Tag */ /* Name.Variable */ /* Operator.Word */ /* Text.Whitespace */ /* Literal.Number.Float */ /* Literal.Number.Hex */ /* Literal.Number.Integer */ /* Literal.Number.Oct */ /* Literal.String.Backtick */ /* Literal.String.Char */ /* Literal.String.Doc */ /* Literal.String.Double */ /* Literal.String.Escape */ /* Literal.String.Heredoc */ /* Literal.String.Interpol */ /* Literal.String.Other */ /* Literal.String.Regex */ /* Literal.String.Single */ /* Literal.String.Symbol */ /* Name.Builtin.Pseudo */ /* Name.Variable.Class */ /* Name.Variable.Global */ /* Name.Variable.Instance */ /* Literal.Number.Integer.Long */ }
+.highlight .hll { background-color: #ffffcc; }
+.highlight .c { color: #87ceeb; }
+.highlight .err { color: #ffffff; }
+.highlight .g { color: #ffffff; }
+.highlight .k { color: #f0e68c; }
+.highlight .l { color: #ffffff; }
+.highlight .n { color: #ffffff; }
+.highlight .o { color: #ffffff; }
+.highlight .x { color: #ffffff; }
+.highlight .p { color: #ffffff; }
+.highlight .cm { color: #87ceeb; }
+.highlight .cp { color: #cd5c5c; }
+.highlight .c1 { color: #87ceeb; }
+.highlight .cs { color: #87ceeb; }
+.highlight .gd { color: #0000c0; font-weight: bold; background-color: #008080; }
+.highlight .ge { color: #c000c0; text-decoration: underline; }
+.highlight .gr { color: #c0c0c0; font-weight: bold; background-color: #c00000; }
+.highlight .gh { color: #cd5c5c; }
+.highlight .gi { color: #ffffff; background-color: #0000c0; }
+.highlight span.go { color: #add8e6; font-weight: bold; background-color: #4d4d4d; }
+.highlight .gp { color: #ffffff; }
+.highlight .gs { color: #ffffff; }
+.highlight .gu { color: #cd5c5c; }
+.highlight .gt { color: #c0c0c0; font-weight: bold; background-color: #c00000; }
+.highlight .kc { color: #f0e68c; }
+.highlight .kd { color: #f0e68c; }
+.highlight .kn { color: #f0e68c; }
+.highlight .kp { color: #f0e68c; }
+.highlight .kr { color: #f0e68c; }
+.highlight .kt { color: #bdb76b; }
+.highlight .ld { color: #ffffff; }
+.highlight .m { color: #EAB289; }
+.highlight .s { color: #EAB289; }
+.highlight .na { color: #8CF0E8; }
+.highlight .nb { color: #ffffff; }
+.highlight .nc { color: #ffffff; }
+.highlight .no { color: #ffa0a0; }
+.highlight .nd { color: #ffffff; }
+.highlight .ni { color: #ffdead; }
+.highlight .ne { color: #ffffff; }
+.highlight .nf { color: #ffffff; }
+.highlight .nl { color: #ffffff; }
+.highlight .nn { color: #ffffff; }
+.highlight .nx { color: #ffffff; }
+.highlight .py { color: #ffffff; }
+.highlight .nt { color: #f0e68c; }
+.highlight .nv { color: #98fb98; }
+.highlight .ow { color: #ffffff; }
+.highlight .w { color: #ffffff; }
+.highlight .mf { color: #ffffff; }
+.highlight .mh { color: #ffffff; }
+.highlight .mi { color: #ffffff; }
+.highlight .mo { color: #ffffff; }
+.highlight .sb { color: #ffffff; }
+.highlight .sc { color: #ffffff; }
+.highlight .sd { color: #ffffff; }
+.highlight .s2 { color: #ffffff; }
+.highlight .se { color: #ffffff; }
+.highlight .sh { color: #ffffff; }
+.highlight .si { color: #ffffff; }
+.highlight .sx { color: #ffffff; }
+.highlight .sr { color: #ffffff; }
+.highlight .s1 { color: #ffffff; }
+.highlight .ss { color: #ffffff; }
+.highlight .bp { color: #ffffff; }
+.highlight .vc { color: #98fb98; }
+.highlight .vg { color: #98fb98; }
+.highlight .vi { color: #98fb98; }
+.highlight .il { color: #ffffff; }
+.highlight .bash .nv { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none; }
+.language-bash .highlight .nb { color: #99D4FF; }
 
-html {
-  height: 100%;
-  max-height: 100%;
-  font-size: 10px;
-  -webkit-tap-highlight-color: transparent; }
+html { height: 100%; max-height: 100%; font-size: 10px; -webkit-tap-highlight-color: transparent; }
 
-body {
-  height: 100%;
-  max-height: 100%;
-  font-family: "Merriweather", serif;
-  letter-spacing: 0.01rem;
-  font-size: 1.8em;
-  line-height: 1.75em;
-  color: #3A4145;
-  font-weight: 400;
-  -webkit-font-feature-settings: 'kern' 1;
-  -moz-font-feature-settings: 'kern' 1;
-  -o-font-feature-settings: 'kern' 1;
-  text-rendering: geometricPrecision; }
+body { height: 100%; max-height: 100%; font-family: "Merriweather", serif; letter-spacing: 0.01rem; font-size: 1.8em; line-height: 1.75em; color: #3A4145; font-weight: 400; -webkit-font-feature-settings: 'kern' 1; -moz-font-feature-settings: 'kern' 1; -o-font-feature-settings: 'kern' 1; text-rendering: geometricPrecision; }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-input,
-label,
-select,
-textarea,
-table {
-  -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  font-family: "Open Sans", sans-serif;
-  text-rendering: geometricPrecision; }
+h1, h2, h3, h4, h5, h6, input, label, select, textarea, table { -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1; -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1; -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1; font-family: "Open Sans", sans-serif; text-rendering: geometricPrecision; }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #2E2E2E;
-  line-height: 1.15em;
-  margin: 0 0 0.4em 0;
-  font-weight: 600; }
+h1, h2, h3, h4, h5, h6 { color: #2E2E2E; line-height: 1.15em; margin: 0 0 0.4em 0; font-weight: 600; }
 
-h1 {
-  font-size: 5rem;
-  letter-spacing: -2px;
-  text-indent: -3px; }
+h1 { font-size: 5rem; letter-spacing: -2px; text-indent: -3px; }
 
-h2 {
-  font-size: 3.6rem;
-  letter-spacing: -1px; }
+h2 { font-size: 3.6rem; letter-spacing: -1px; }
 
-h3 {
-  font-size: 3rem; }
+h3 { font-size: 3rem; }
 
-h4 {
-  font-size: 2.3rem; }
+h4 { font-size: 2.3rem; }
 
-h5 {
-  font-size: 2rem; }
+h5 { font-size: 2rem; }
 
-h6 {
-  font-size: 2rem; }
+h6 { font-size: 2rem; }
 
-a {
-  color: #4A4A4A;
-  transition: color 0.2s ease; }
+a { color: #4A4A4A; transition: color 0.2s ease; }
 
-a:hover {
-  color: #111; }
+a:hover { color: #111; }
 
-p,
-ul,
-ol,
-dl,
-figure {
-  -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
-  -moz-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
-  -o-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
-  margin: 0 0 1.75em 0;
-  text-rendering: geometricPrecision; }
+p, ul, ol, dl, figure { -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1; -moz-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1; -o-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1; margin: 0 0 1.75em 0; text-rendering: geometricPrecision; }
 
-ol,
-ul {
-  padding-left: 3rem; }
+ol, ul { padding-left: 3rem; }
 
-ol ol,
-ul ul,
-ul ol,
-ol ul {
-  margin: 0 0 0.4em 0;
-  padding-left: 2em; }
+ol ol, ul ul, ul ol, ol ul { margin: 0 0 0.4em 0; padding-left: 2em; }
 
-dl dt {
-  float: left;
-  width: 180px;
-  overflow: hidden;
-  clear: left;
-  text-align: right;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-weight: 700;
-  margin-bottom: 1em; }
+dl dt { float: left; width: 180px; overflow: hidden; clear: left; text-align: right; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; margin-bottom: 1em; }
 
-dl dd {
-  margin-left: 200px;
-  margin-bottom: 1em; }
+dl dd { margin-left: 200px; margin-bottom: 1em; }
 
-li {
-  margin: 0.4em 0; }
+li { margin: 0.4em 0; }
 
-li li {
-  margin: 0; }
+li li { margin: 0; }
 
-hr, .content h3::before {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: #eee 1px solid;
-  margin: 3.2em 0;
-  padding: 0; }
+hr, .content h3::before { display: block; height: 1px; border: 0; border-top: #eee 1px solid; margin: 3.2em 0; padding: 0; }
 
-mark {
-  background-color: #fdffb6; }
+mark { background-color: #fdffb6; }
 
-kbd {
-  display: inline-block;
-  margin-bottom: 0.4em;
-  padding: 1px 8px;
-  border: #CCC 1px solid;
-  color: #666;
-  text-shadow: #FFF 0 1px 0;
-  font-size: 0.8em;
-  font-weight: 700;
-  background: #F4F4F4;
-  border-radius: 4px;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset; }
+kbd { display: inline-block; margin-bottom: 0.4em; padding: 1px 8px; border: #CCC 1px solid; color: #666; text-shadow: #FFF 0 1px 0; font-size: 0.8em; font-weight: 700; background: #F4F4F4; border-radius: 4px; box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset; }
 
-@media only screen and (max-width: 900px) {
-  blockquote {
-    margin-left: 0; }
+@media only screen and (max-width: 900px) { blockquote { margin-left: 0; }
+  hr, .content h3::before { margin: 2.4em 0; }
+  ol, ul { padding-left: 2em; }
+  h1 { font-size: 4.5rem; text-indent: -2px; }
+  h2 { font-size: 3.6rem; }
+  h3 { font-size: 3.1rem; }
+  h4 { font-size: 2.5rem; }
+  h5 { font-size: 2.2rem; }
+  h6 { font-size: 1.8rem; } }
+@media only screen and (max-width: 500px) { hr, .content h3::before { margin: 1.75em 0; }
+  p, ul, ol, dl { font-size: 0.95em; margin: 0 0 2.5rem 0; }
+  h1, h2, h3, h4, h5, h6 { margin: 0 0 0.3em 0; }
+  h1 { font-size: 2.8rem; letter-spacing: -1px; }
+  h2 { font-size: 2.4rem; letter-spacing: 0; }
+  h3 { font-size: 2.1rem; }
+  h4 { font-size: 1.9rem; }
+  h5 { font-size: 1.8rem; }
+  h6 { font-size: 1.8rem; } }
+pre, code, tt { font-family: Inconsolata, Consolas, Courier, "Courier New", "Liberation Mono", monospace; font-size: 0.85em; white-space: pre-wrap; border-radius: 2px; line-height: 1.4; font-weight: 400; background-color: #404145; color: #FAFAFA; border-radius: 2px; }
 
-  hr, .content h3::before {
-    margin: 2.4em 0; }
+pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 10px; font-size: 0.9em; white-space: pre; overflow: auto; border-radius: 3px; }
+pre code, pre tt { font-size: inherit; white-space: pre-wrap; background: transparent; border: none; padding: 0; }
 
-  ol,
-  ul {
-    padding-left: 2em; }
+blockquote > code, li > code, p > code { padding: 4px 6px; white-space: nowrap; }
 
-  h1 {
-    font-size: 4.5rem;
-    text-indent: -2px; }
+input::-ms-clear, input::-ms-reveal { display: none !important; }
 
-  h2 {
-    font-size: 3.6rem; }
+body { height: auto; overflow-x: hidden; background-color: #fff; }
 
-  h3 {
-    font-size: 3.1rem; }
+.navbar-main { background: #55A79A; }
 
-  h4 {
-    font-size: 2.5rem; }
+.navbar-brand { font-size: 2.4rem; font-family: "Open Sans", sans-serif; font-weight: bold; }
 
-  h5 {
-    font-size: 2.2rem; }
+.navbar-text { font-size: 0.8em; }
 
-  h6 {
-    font-size: 1.8rem; } }
-@media only screen and (max-width: 500px) {
-  hr, .content h3::before {
-    margin: 1.75em 0; }
+.content { position: relative; background-color: #fff; color: #222; }
+.content h3::before { content: ""; margin: 60px 0; }
 
-  p,
-  ul,
-  ol,
-  dl {
-    font-size: 0.95em;
-    margin: 0 0 2.5rem 0; }
+.content, .page-header { max-width: 800px; margin: 20px auto 0 auto; }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 0 0 0.3em 0; }
+.page-header h2, .page-header h3 { margin: 0; line-height: 1.2; letter-spacing: -1px; }
+.page-header h2 { font-size: 2rem; margin-left: -1px; color: #888; letter-spacing: 0; }
+.page-header h3 { font-size: 4rem; margin-left: -4px; }
+@media (min-width: 700px) { .page-header h2 { font-size: 2.65rem; }
+  .page-header h3 { font-size: 5.4rem; } }
+@media (min-width: 1180px) { .page-header { margin-top: 55px; } }
 
-  h1 {
-    font-size: 2.8rem;
-    letter-spacing: -1px; }
+.highlight { margin-left: 0; margin-right: 0; }
 
-  h2 {
-    font-size: 2.4rem;
-    letter-spacing: 0; }
+h3 + .warning { margin-top: 1.75em; }
 
-  h3 {
-    font-size: 2.1rem; }
+h4 code { background: #f5f5f5; color: #222; background-color: transparent; font-weight: 700; padding: 0; font-size: 1.1em; line-height: 1; }
 
-  h4 {
-    font-size: 1.9rem; }
+h4 svg { vertical-align: middle; margin-right: 6px; position: relative; top: -2px; fill: #2E2E2E; height: 23px; }
 
-  h5 {
-    font-size: 1.8rem; }
+#search-results { margin: 0; padding: 0; }
+#search-results li { list-style: none; margin: 0; padding: 0; }
+#search-results li h4 { font-size: 2rem; }
+#search-results li p { line-height: 1.5; }
 
-  h6 {
-    font-size: 1.8rem; } }
-pre, code, tt {
-  font-family: Inconsolata, Consolas, Courier, "Courier New", "Liberation Mono", monospace;
-  font-size: 0.85em;
-  white-space: pre-wrap;
-  border-radius: 2px;
-  line-height: 1.4;
-  font-weight: 400;
-  background-color: #404145;
-  color: #FAFAFA;
-  border-radius: 2px; }
+#search-input { -webkit-appearance: none; display: block; margin: 0; padding: 10px 20px 10px 15px; width: 100%; box-sizing: border-box; border: 0; border-bottom: 1px solid rgba(0, 0, 0, 0.075); border-left: 5px solid transparent; font-size: 1.5rem; font-weight: 600; line-height: 1.8; }
+#search-input:focus { outline: none; border-left-color: #55A79A; }
 
-pre {
-  box-sizing: border-box;
-  margin: 0 0 1.75em 0;
-  width: 100%;
-  padding: 10px;
-  font-size: 0.9em;
-  white-space: pre;
-  overflow: auto;
-  border-radius: 3px; }
-  pre code, pre tt {
-    font-size: inherit;
-    white-space: pre-wrap;
-    background: transparent;
-    border: none;
-    padding: 0; }
+.changelog, .changelog > div { margin: 0; padding: 0; list-style: none; }
+.changelog .date { font-style: italic; }
 
-blockquote > code,
-li > code,
-p > code {
-  padding: 4px 6px;
-  white-space: nowrap; }
+.badge { font-family: "Open Sans", sans-serif; padding: 2px 5px; text-transform: uppercase; font-size: 0.8rem; border-radius: 2px; background: #eee; font-weight: bold; }
+.badge.major { background: #55A79A; color: #fff; }
 
-input::-ms-clear,
-input::-ms-reveal {
-  display: none !important; }
+blockquote { border-left: 5px solid #FD0; padding: 10px 15px; margin-left: -15px; margin-right: -10px; background-color: #eef6f5; border-color: #55A79A; }
+blockquote p:last-child { margin-bottom: 0; }
+@media (max-width: 1180px) { blockquote { margin-left: 0; margin-right: 0; } }
 
-body {
-  height: auto;
-  overflow-x: hidden;
-  background-color: #fff; }
-
-.navbar-main {
-  background: #55A79A; }
-
-.navbar-brand {
-  font-size: 2.4rem;
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold; }
-
-.navbar-text {
-  font-size: 0.8em; }
-
-.content {
-  position: relative;
-  background-color: #fff;
-  color: #222; }
-  .content h3::before {
-    content: "";
-    margin: 60px 0; }
-
-.content,
-.page-header {
-  max-width: 800px;
-  margin: 20px auto 0 auto; }
-
-.page-header h2,
-.page-header h3 {
-  margin: 0;
-  line-height: 1.2;
-  letter-spacing: -1px; }
-.page-header h2 {
-  font-size: 2rem;
-  margin-left: -1px;
-  color: #888;
-  letter-spacing: 0; }
-.page-header h3 {
-  font-size: 4rem;
-  margin-left: -4px; }
-@media (min-width: 700px) {
-  .page-header h2 {
-    font-size: 2.65rem; }
-  .page-header h3 {
-    font-size: 5.4rem; } }
-@media (min-width: 1180px) {
-  .page-header {
-    margin-top: 55px; } }
-
-.highlight {
-  margin-left: 0;
-  margin-right: 0; }
-
-h3 + .warning {
-  margin-top: 1.75em; }
-
-h4 code {
-  background: #f5f5f5;
-  color: #222;
-  background-color: transparent;
-  font-weight: 700;
-  padding: 0;
-  font-size: 1.1em;
-  line-height: 1; }
-
-h4 svg {
-  vertical-align: middle;
-  margin-right: 6px;
-  position: relative;
-  top: -2px;
-  fill: #2E2E2E;
-  height: 23px; }
-
-#search-results {
-  margin: 0;
-  padding: 0; }
-  #search-results li {
-    list-style: none;
-    margin: 0;
-    padding: 0; }
-    #search-results li h4 {
-      font-size: 2rem; }
-    #search-results li p {
-      line-height: 1.5; }
-
-#search-input {
-  -webkit-appearance: none;
-  display: block;
-  margin: 0;
-  padding: 10px 20px 10px 15px;
-  width: 100%;
-  box-sizing: border-box;
-  border: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.075);
-  border-left: 5px solid transparent;
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 1.8; }
-  #search-input:focus {
-    outline: none;
-    border-left-color: #55A79A; }
-
-.changelog,
-.changelog > div {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-.changelog .date {
-  font-style: italic; }
-
-.badge {
-  font-family: "Open Sans", sans-serif;
-  padding: 2px 5px;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  border-radius: 2px;
-  background: #eee;
-  font-weight: bold; }
-  .badge.major {
-    background: #55A79A;
-    color: #fff; }
-
-blockquote {
-  border-left: 5px solid #FD0;
-  padding: 10px 15px;
-  margin-left: -15px;
-  margin-right: -10px;
-  background-color: #eef6f5;
-  border-color: #55A79A; }
-  blockquote p:last-child {
-    margin-bottom: 0; }
-  @media (max-width: 1180px) {
-    blockquote {
-      margin-left: 0;
-      margin-right: 0; } }
-
-img {
-  max-width: 100%;
-  height: auto; }
+img { max-width: 100%; height: auto; }

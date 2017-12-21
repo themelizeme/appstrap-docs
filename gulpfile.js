@@ -6,10 +6,11 @@
 const gulp = require('gulp');
 const jekyll = require('gulp-jekyll-stream');
 const gutil = require('gulp-util');
-var del = require('del');
-var deletefile = require('gulp-delete-file');
+const zip = require('gulp-zip');
+const del = require('del');
+const deletefile = require('gulp-delete-file');
 
-var paths = {};
+const paths = {};
 paths.src = process.cwd();
 paths.dist = 'docs-dist';
 
@@ -29,10 +30,16 @@ gulp.task('docs-build', function() {
 });
 
 gulp.task('docs-clean', ['docs-build'], function() {
-  del([
+  return del([
     paths.dist + '/*.xml',
     paths.dist + '/*.txt',
   ]);
+});
+
+gulp.task('docs-zip', ['docs-build', 'docs-clean'], function() {
+  gulp.src(paths.dist + '/*')
+    .pipe(zip(paths.dist + '.zip'))
+    .pipe(gulp.dest(paths.src))
 });
 
 // error handling
@@ -42,4 +49,4 @@ var onError = function (error) {
 };
 
 // gulp default task
-gulp.task('default', ['docs-build', 'docs-clean']);
+gulp.task('default', ['docs-build', 'docs-clean', 'docs-zip']);
