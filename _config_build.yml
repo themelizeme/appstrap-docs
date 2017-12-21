@@ -1,0 +1,12 @@
+# ----
+# Site
+
+environment: build
+baseurl: .
+permalink: /:title.html
+
+collections:
+  docs:
+    title: Documentation
+    permalink: /:title.html
+    output: true

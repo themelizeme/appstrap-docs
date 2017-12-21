@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-dest": "^0.2.0",
+    "gulp-delete-file": "^1.0.2",
+    "gulp-jekyll": "^0.0.0",
+    "gulp-jekyll-stream": "^1.0.1",
+    "gulp-util": "^3.0.8"
+  }
+}

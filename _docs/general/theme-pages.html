@@ -1,0 +1,15 @@
+---
+title: Theme Pages
+category: General
+order: 2
+---
+
+The following page templates are included in {{site.theme.short_name}}:
+
+<ul>
+{% for pages in site.theme.pages %}
+  {% for page in pages %}
+  <li><a href="{{ site.theme.demo_path }}{{ page[0] }}" target="_blank">{{ page[1] }}</a></li>
+  {% endfor %}
+{% endfor %}
+</ul>
