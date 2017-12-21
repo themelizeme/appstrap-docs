@@ -77,7 +77,7 @@ defaults:
 # -----------
 # Custom
 
-theme:
+_theme:
   name: AppStrap Bootstrap 4 Theme
   short_name: AppStrap
   description: AppStrap is a fully responsive business or app bundle containing a massive 130 templates built with **Bootstrap 4.0.0-beta.2** using the latest HTML5 & CSS3 techniques. Full flexbox support, modular structure (reuse blocks & widgets on any page), Sass & gulp integration (customise to suite your needs), one pagers, homepage variations, Shop UI & more!
