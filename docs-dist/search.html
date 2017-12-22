@@ -146,6 +146,8 @@
 										<a href="./changelog.html">Changelog</a>
 										<ul>
 											
+												<li class="nav-item "><a href="./3.0.10-upgrade.html">3.0.10 Upgrade</a></li>
+											
 												<li class="nav-item "><a href="./3.0.9-upgrade.html">3.0.9 Upgrade</a></li>
 											
 												<li class="nav-item "><a href="./3.0.8-upgrade.html">3.0.8 Upgrade</a></li>
@@ -158,7 +160,9 @@
 							<hr class="my-3" />
 							<p>
 								<small>Docs version: 1.0</small><br />
-								<small>Docs updated: 2017-12-21</small></p>
+								<small>Docs updated: 2017-12-22</small><br />
+							<small><a href="https://thomjjames.github.io/appstrap-docs/docs-dist.zip">Download docs</a></small>
+							</p>
 						</nav>
 					</header>
 				</div>
@@ -203,6 +207,23 @@
 						"category": "",
 						"url": " /3.0.9-upgrade.html",
 						"content": "This release updates to Bootstrap v4.0.0-beta.2, for official release notes and ship list see:  https://github.com/twbs/bootstrap/issues/23278\n\nReplace the following files:\n\n\n  Replace: assets/js/scripts.js and assets/js/scripts.min.js\n  Replace: .navbar-toggleable-* classes with the new .navbar-expand-* classes\n  Replace: index-event.html\n  Replace: All index-onepager html files\n  Replace: data-toggle=”unveil” with data-toggle=”blazy”\n  Replace: index-jobs.html\n  Replace: index-freealancer-portfolio.html carousel code\n  Replace: Backup /assets/scss/custom then overwrite /assets/scss/ with new files, then add your /assets/scss/custom directory back, run gulp\n  Replace: .header-transparent now has no default sticky styles, use the new .sticky-header-light, .sticky-header-dark, .sticky-header-primary classes to control the .header\n  Removed: .header-translucent has been removed in favour of using .bg-* classes  and .bg-op-(1-9) classes for more flexibility\n  Replace: The following colour classes have been replaced:\n    \n      .bg-inverse (use .bg-dark)\n      .bg-faded (use .bg-light)\n      .text-inverse (use .text-dark)\n      .border-faded (use .border-light)\n      .divider-faded (use .divider-light)\n      .hr-faded (use .hr-light)\n      .navbar-inverse (use .navbar-dark)\n      .btn-inverse (use .btn-dark)\n    \n  \n  Replace: Sass variable changes:\n    \n      All colours have been added to a sass map called $as-theme-colours and $as-theme-colours-extended (with social brands)\n      $extended-colour-options has been renamed to $as-theme-colours-extended-options and set to false as default.\n      $theme-colours has been renamed to $as-theme-colours-default\n      $theme-brand has been renamed to $as-theme-colours-brands\n      $social_brands has been renamed to $as-theme-colours-social-brands\n    \n  \n\n\nChanges:\n\n\n  NEW: New magazine homepage variation with new header on sticky functionality and inline overlay search form\n  NEW: Control scroll link speed by passing data-scroll-link-speed on any data-toggle=”scroll-link” link\n  NEW: Added animated modals with animate.css (elements-modals.html)\n  NEW: Responsive overlay menu header example (header-overlay-menu-responsive.html)\n  NEW: Social media branding colours and utilities page (elements-social-media.html)\n  NEW: Amazing header control with new sticky classes, restyle your header on sticky for the ultimate flexibility\n  NEW: .nav-link-dd-effect main nav link class to make nav links act link dropdown links on hover\n  UPDATED: Bootstrap beta 2 update (see: https://github.com/twbs/bootstrap/issues/23278)\n  UPDATED: added new position classes .pos-BREAKPOINT-(y,x,a) for y axis, x axis and all sides and pos-BREAKPOINT-SIDE-auto for auto positioning\n  UPDATED: Migrated from unveil to blazy for image lazy loading. Lazy load anything with an src!\n  BUGFIX: Fixed markup issue on index-event.html\n  BUGFIX: jobs sidebar sticky fix on small screens and header scroll issue fix\n  BUGFIX: Tabs active background transparent fix\n  BUGFIX: scroll menu active state on one pagers fix\n  BUGFIX: IE11 carousel fix on index-freealancer-portfolio.html"
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"3-0-10-upgrade-html": {
+						"id": "3-0-10-upgrade-html",
+						"title": "3.0.10 Upgrade",
+						"category": "",
+						"url": " /3.0.10-upgrade.html",
+						"content": "Replace the following files:\n\n\n  Replace: assets/js/scripts.js and assets/js/scripts.min.js\n  Replace: assets/css (BACKUP YOUR custom-style.css FILE FIRST)\n  Replace: assets/scss (BACKUP YOUR /custom DIRECTORY FIRST)\n\n\nChanges:\n\n\n  NEW: App landing page homepage variation (see: index-app-landing.html)\n  UPDATED: Added new w-BREAKPOINT-auto &amp; h-BREAKPOINT-auto classes\n  UPDATED: Made data-animate functionality more SEO friendly, elements already in view on load will only animate if they have data-animate-inview=true\n  UPDATED: Made page loader more SEO friendly, now requires .page-loader-spacer class added to body tag on all pages using data-toggle=”page-loader”\n  BUGFIX: jPanel menu opening on left side fix"
 					}
 
 					
@@ -474,7 +495,7 @@
 						"title": "Theme info",
 						"category": "",
 						"url": " /theme-info.html",
-						"content": "Name: AppStrap Bootstrap 4 Theme\n  Version 3.1\n  Created: Jan 2013\n  Updated: Dec 23rd 2017\n  Bootstrap version: 4.0.0-beta.2\n\n\nTheme Credits\n\n\n  Slideshow graphics: http://medialoot.com &amp; http://www.premiumpixels.com/\n  Team photos: http://www.flickr.com/photos/vectorportal/sets/72157622868867274/\n  Blog photos: http://www.flickr.com/photos/xjrlokix/ (Ben Fredericson)\n  Patterns: http://subtlepatterns.com/\n  Backstretch photos: http://unsplash.com\n  About me photo: https://www.flickr.com/photos/anseledwardsphotography/\n  Flag icons: http://lipis.github.io/flag-icon-css/\n  Card photos: https://picjumbo.com\n  Shop &amp; other photos: https://unsplash.com/\n  Loading graphics/plugin: http://joaopereirawd.github.io/fakeLoader.js/\n  Videos: https://www.youtube.com/watch?v=qOfuTI5165w\n  Videos &amp; photos: https://pixabay.com\n  Photos: pexels.com\n  Photos: stocksnap.io"
+						"content": "Name: AppStrap Bootstrap 4 Theme\n  Version 3.0.10\n  Created: Jan 2013\n  Updated: Dec 22rd 2017\n  Bootstrap version: 4.0.0-beta.2\n\n\nTheme Credits\n\n\n  Slideshow graphics: http://medialoot.com &amp; http://www.premiumpixels.com/\n  Team photos: http://www.flickr.com/photos/vectorportal/sets/72157622868867274/\n  Blog photos: http://www.flickr.com/photos/xjrlokix/ (Ben Fredericson)\n  Patterns: http://subtlepatterns.com/\n  Backstretch photos: http://unsplash.com\n  About me photo: https://www.flickr.com/photos/anseledwardsphotography/\n  Flag icons: http://lipis.github.io/flag-icon-css/\n  Card photos: https://picjumbo.com\n  Shop &amp; other photos: https://unsplash.com/\n  Loading graphics/plugin: http://joaopereirawd.github.io/fakeLoader.js/\n  Videos: https://www.youtube.com/watch?v=qOfuTI5165w\n  Videos &amp; photos: https://pixabay.com\n  Photos: pexels.com\n  Photos: stocksnap.io"
 					}
 
 					
