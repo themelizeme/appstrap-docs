@@ -87,7 +87,7 @@ _theme:
   bootstrap_version: "4.0.0-beta.2"
   created: Jan 2013
   updated: Dec 22rd 2017
-  demo_path: http://demos.themelize.me/appstrap3.0.9/theme/
+  demo_path: http://demos.themelize.me/appstrap3.0.10/theme/
   pages:
   - intro.html: Welcome To AppStrap
   - index.html: Homepage (default)

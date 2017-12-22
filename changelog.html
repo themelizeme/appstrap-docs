@@ -11,7 +11,7 @@ Changelog contains the most recent changes/updates.
 
 {% for group in grouped %}
   {% if group.name == 'Changelog' %}
-    {% assign items = group.items | sort: 'theme_version' | reverse %}
+    {% assign items = group.items | sort: 'date' | reverse %}
     {% for item in items %}
       <li class="nav-item {% if item.url == page.url %}current{% endif %}"><span class="date">{{ item.date | date: "%Y-%m-%d"  }}:</span> <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
    {% endfor %}
