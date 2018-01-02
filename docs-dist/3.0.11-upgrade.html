@@ -16,19 +16,19 @@
 
 		<link type="application/atom+xml" rel="alternate" href="https://github.com/thomjjames/appstrap-docs/feed.xml" title="AppStrap Docs" />
 		<!-- Begin Jekyll SEO tag v2.3.0 -->
-<title>3.0.9 Upgrade | AppStrap Docs</title>
-<meta property="og:title" content="3.0.9 Upgrade" />
+<title>3.0.11 Upgrade | AppStrap Docs</title>
+<meta property="og:title" content="3.0.11 Upgrade" />
 <meta name="author" content="Themelize.me" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This release updates to Bootstrap v4.0.0-beta.2, for official release notes and ship list see: https://github.com/twbs/bootstrap/issues/23278" />
-<meta property="og:description" content="This release updates to Bootstrap v4.0.0-beta.2, for official release notes and ship list see: https://github.com/twbs/bootstrap/issues/23278" />
-<link rel="canonical" href="https://github.com/thomjjames/appstrap-docs/3.0.9-upgrade.html" />
-<meta property="og:url" content="https://github.com/thomjjames/appstrap-docs/3.0.9-upgrade.html" />
+<meta name="description" content="Replace the following files/snippets:" />
+<meta property="og:description" content="Replace the following files/snippets:" />
+<link rel="canonical" href="https://github.com/thomjjames/appstrap-docs/3.0.11-upgrade.html" />
+<meta property="og:url" content="https://github.com/thomjjames/appstrap-docs/3.0.11-upgrade.html" />
 <meta property="og:site_name" content="AppStrap Docs" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2017-11-27T00:00:00+01:00" />
+<meta property="article:published_time" content="2018-01-02T00:00:00+01:00" />
 <script type="application/ld+json">
-{"name":null,"description":"This release updates to Bootstrap v4.0.0-beta.2, for official release notes and ship list see: https://github.com/twbs/bootstrap/issues/23278","author":{"@type":"Person","name":"Themelize.me"},"@type":"Article","url":"https://github.com/thomjjames/appstrap-docs/3.0.9-upgrade.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://github.com/thomjjames/appstrap-docs/siteicon.png"},"name":"Themelize.me"},"image":null,"headline":"3.0.9 Upgrade","dateModified":"2017-11-27T00:00:00+01:00","datePublished":"2017-11-27T00:00:00+01:00","sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+{"name":null,"description":"Replace the following files/snippets:","author":{"@type":"Person","name":"Themelize.me"},"@type":"Article","url":"https://github.com/thomjjames/appstrap-docs/3.0.11-upgrade.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://github.com/thomjjames/appstrap-docs/siteicon.png"},"name":"Themelize.me"},"image":null,"headline":"3.0.11 Upgrade","dateModified":"2018-01-02T00:00:00+01:00","datePublished":"2018-01-02T00:00:00+01:00","sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -148,11 +148,11 @@
 										<a href="./changelog.html">Changelog</a>
 										<ul>
 											
-												<li class="nav-item "><a href="./3.0.11-upgrade.html">3.0.11 Upgrade</a></li>
+												<li class="nav-item current"><a href="./3.0.11-upgrade.html">3.0.11 Upgrade</a></li>
 											
 												<li class="nav-item "><a href="./3.0.10-upgrade.html">3.0.10 Upgrade</a></li>
 											
-												<li class="nav-item current"><a href="./3.0.9-upgrade.html">3.0.9 Upgrade</a></li>
+												<li class="nav-item "><a href="./3.0.9-upgrade.html">3.0.9 Upgrade</a></li>
 											
 												<li class="nav-item "><a href="./3.0.8-upgrade.html">3.0.8 Upgrade</a></li>
 											
@@ -174,65 +174,37 @@
 				<section class="main col-lg-9" id="main">
 					<div class="page-header">
 						<h2>Changelog</h2>
-						<h3>3.0.9 Upgrade</h3>
+						<h3>3.0.11 Upgrade</h3>
 					</div>
 					<article class="content">
-						<p>This release updates to Bootstrap v4.0.0-beta.2, for official release notes and ship list see:  https://github.com/twbs/bootstrap/issues/23278</p>
+						<h3 id="replace-the-following-filessnippets">Replace the following files/snippets:</h3>
 
-<h3 id="replace-the-following-files">Replace the following files:</h3>
+<p>Replace on all pages:</p>
 
-<ul>
-  <li>Replace: assets/js/scripts.js and assets/js/scripts.min.js</li>
-  <li>Replace: .navbar-toggleable-* classes with the new .navbar-expand-* classes</li>
-  <li>Replace: index-event.html</li>
-  <li>Replace: All index-onepager html files</li>
-  <li>Replace: data-toggle=”unveil” with data-toggle=”blazy”</li>
-  <li>Replace: index-jobs.html</li>
-  <li>Replace: index-freealancer-portfolio.html carousel code</li>
-  <li>Replace: Backup /assets/scss/custom then overwrite /assets/scss/ with new files, then add your /assets/scss/custom directory back, run gulp</li>
-  <li>Replace: .header-transparent now has no default sticky styles, use the new .sticky-header-light, .sticky-header-dark, .sticky-header-primary classes to control the .header</li>
-  <li>Removed: .header-translucent has been removed in favour of using .bg-* classes  and .bg-op-(1-9) classes for more flexibility</li>
-  <li>Replace: The following colour classes have been replaced:
-    <ul>
-      <li>.bg-inverse (use .bg-dark)</li>
-      <li>.bg-faded (use .bg-light)</li>
-      <li>.text-inverse (use .text-dark)</li>
-      <li>.border-faded (use .border-light)</li>
-      <li>.divider-faded (use .divider-light)</li>
-      <li>.hr-faded (use .hr-light)</li>
-      <li>.navbar-inverse (use .navbar-dark)</li>
-      <li>.btn-inverse (use .btn-dark)</li>
-    </ul>
-  </li>
-  <li>Replace: Sass variable changes:
-    <ul>
-      <li>All colours have been added to a sass map called $as-theme-colours and $as-theme-colours-extended (with social brands)</li>
-      <li>$extended-colour-options has been renamed to $as-theme-colours-extended-options and set to false as default.</li>
-      <li>$theme-colours has been renamed to $as-theme-colours-default</li>
-      <li>$theme-brand has been renamed to $as-theme-colours-brands</li>
-      <li>$social_brands has been renamed to $as-theme-colours-social-brands</li>
-    </ul>
-  </li>
-</ul>
+<ol>
+  <li>Bootstrap CSS:</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Bootstrap v4.0.0-beta.2 CSS via CDN --&gt;</span><br data-jekyll-commonmark-ghpages="" /><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"</span><span class="nt">&gt;</span></code></pre></figure>
+
+<p>with</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Bootstrap v4.0.0-beta.3 CSS via CDN --&gt;</span><br data-jekyll-commonmark-ghpages="" /><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"</span><span class="nt">&gt;</span></code></pre></figure>
+
+<ol>
+  <li>Bootstrap Javascript:</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Bootstrap v4.0.0-beta.2 JS via CDN --&gt;</span><br data-jekyll-commonmark-ghpages="" /><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+
+<p>with</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Bootstrap v4.0.0-beta.3 JS via CDN --&gt;</span><br data-jekyll-commonmark-ghpages="" /><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
 
 <h3 id="changes">Changes:</h3>
 
 <ul>
-  <li>NEW: New magazine homepage variation with new header on sticky functionality and inline overlay search form</li>
-  <li>NEW: Control scroll link speed by passing data-scroll-link-speed on any data-toggle=”scroll-link” link</li>
-  <li>NEW: Added animated modals with animate.css (elements-modals.html)</li>
-  <li>NEW: Responsive overlay menu header example (header-overlay-menu-responsive.html)</li>
-  <li>NEW: Social media branding colours and utilities page (elements-social-media.html)</li>
-  <li>NEW: Amazing header control with new sticky classes, restyle your header on sticky for the ultimate flexibility</li>
-  <li>NEW: .nav-link-dd-effect main nav link class to make nav links act link dropdown links on hover</li>
-  <li>UPDATED: Bootstrap beta 2 update (see: https://github.com/twbs/bootstrap/issues/23278)</li>
-  <li>UPDATED: added new position classes .pos-BREAKPOINT-(y,x,a) for y axis, x axis and all sides and pos-BREAKPOINT-SIDE-auto for auto positioning</li>
-  <li>UPDATED: Migrated from unveil to blazy for image lazy loading. Lazy load anything with an src!</li>
-  <li>BUGFIX: Fixed markup issue on index-event.html</li>
-  <li>BUGFIX: jobs sidebar sticky fix on small screens and header scroll issue fix</li>
-  <li>BUGFIX: Tabs active background transparent fix</li>
-  <li>BUGFIX: scroll menu active state on one pagers fix</li>
-  <li>BUGFIX: IE11 carousel fix on index-freealancer-portfolio.html</li>
+  <li>UPDATED: To Bootstrap v4.0.0-beta.3, see <a href="https://github.com/twbs/bootstrap/issues/24439">https://github.com/twbs/bootstrap/issues/24439</a> and <a href="http://getbootstrap.com/docs/4.0/migration/#beta-3-changes">http://getbootstrap.com/docs/4.0/migration/#beta-3-changes</a></li>
 </ul>
 
 
