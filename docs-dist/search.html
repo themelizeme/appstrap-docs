@@ -146,6 +146,8 @@
 										<a href="./changelog.html">Changelog</a>
 										<ul>
 											
+												<li class="nav-item "><a href="./3.0.12-upgrade.html">3.0.12 Upgrade</a></li>
+											
 												<li class="nav-item "><a href="./3.0.11-upgrade.html">3.0.11 Upgrade</a></li>
 											
 												<li class="nav-item "><a href="./3.0.10-upgrade.html">3.0.10 Upgrade</a></li>
@@ -244,6 +246,23 @@
 						"category": "",
 						"url": " /3.0.11-upgrade.html",
 						"content": "Replace the following files/snippets:\n\nReplace on all pages:\n\n\n  Bootstrap CSS:\n\n\n&lt;!-- Bootstrap v4.0.0-beta.2 CSS via CDN --&gt;&lt;link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css\"&gt;\n\nwith\n\n&lt;!-- Bootstrap v4.0.0-beta.3 CSS via CDN --&gt;&lt;link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css\"&gt;\n\n\n  Bootstrap Javascript:\n\n\n&lt;!-- Bootstrap v4.0.0-beta.2 JS via CDN --&gt;&lt;script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js\"&gt;&lt;/script&gt;\n\nwith\n\n&lt;!-- Bootstrap v4.0.0-beta.3 JS via CDN --&gt;&lt;script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js\"&gt;&lt;/script&gt;\n\nChanges:\n\n\n  UPDATED: To Bootstrap v4.0.0-beta.3, see https://github.com/twbs/bootstrap/issues/24439 and http://getbootstrap.com/docs/4.0/migration/#beta-3-changes"
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"3-0-12-upgrade-html": {
+						"id": "3-0-12-upgrade-html",
+						"title": "3.0.12 Upgrade",
+						"category": "",
+						"url": " /3.0.12-upgrade.html",
+						"content": "Replace the following files/snippets:\n\n\n  Replace: assets/js/scripts.js &amp; assets/js/scripts.min.js\n  Replace: assets/css/* files\n  Replace: theme/gulpfile.js\n  Replace: assets/scss/*\n\n\nChanges:\n\n\n  NEW: New local assets list (assets/assets-map.txt) so you can see which .html files use what images, css &amp; javascript.\n  NEW: New unused-css gulp command for streamlining your sites for production. See https://thomjjames.github.io/appstrap-docs/ for more info.\n  NEW: Added autoprefixer to gulp so CSS is automatically prefixed with browser prefixes (see: https://github.com/postcss/autoprefixer)\n  UPDATED: favicons updated &amp; included in assets/favicons, make your own with https://realfavicongenerator.net\n  BUGFIX: Fixed broken form input groups"
 					}
 
 					
