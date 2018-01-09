@@ -22,8 +22,8 @@ social:
     - https://github.com/thomjjames/appstrap-docs
 
 bootstrap:
-  css: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css
-  js: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js
+  css: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css
+  js: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js
   
 
 # -----
@@ -80,14 +80,14 @@ defaults:
 _theme:
   name: AppStrap Bootstrap 4 Theme
   short_name: AppStrap
-  description: AppStrap is a fully responsive business or app bundle containing a massive 130 templates built with **Bootstrap 4.0.0-beta.2** using the latest HTML5 & CSS3 techniques. Full flexbox support, modular structure (reuse blocks & widgets on any page), Sass & gulp integration (customise to suite your needs), one pagers, homepage variations, Shop UI & more!
-  version: 3.0.10
+  description: AppStrap is a fully responsive business or app bundle containing a massive 130 templates built with **Bootstrap 4.0.0-beta.3** using the latest HTML5 & CSS3 techniques. Full flexbox support, modular structure (reuse blocks & widgets on any page), Sass & gulp integration (customise to suite your needs), one pagers, homepage variations, Shop UI & more!
+  version: 3.0.12
   buy_link: "https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme"
   preview_link: "https://wrapbootstrap.com/preview/WB0C6D0H4?ref=tme"
-  bootstrap_version: "4.0.0-beta.2"
+  bootstrap_version: "4.0.0-beta.3"
   created: Jan 2013
-  updated: Dec 22rd 2017
-  demo_path: http://demos.themelize.me/appstrap3.0.10/theme/
+  updated: Jan 9th 2018
+  demo_path: http://demos.themelize.me/appstrap3.0.12/theme/
   pages:
   - intro.html: Welcome To AppStrap
   - index.html: Homepage (default)

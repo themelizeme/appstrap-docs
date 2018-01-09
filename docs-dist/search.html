@@ -7,7 +7,7 @@
 		<meta name="generator" content="Jekyll v3.6.2">
 
 		<!-- Bootstrap v4.0.0-beta CSS via CDN -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
 		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
 		<link rel="stylesheet" href="./css/main.css">
 		<link rel="apple-touch-icon" href="./apple-touch-icon.png">
@@ -112,8 +112,6 @@
 											
 												<li class="nav-item "><a href="./9-dropdowns-hover.html">Dropdowns On Hover</a></li>
 											
-												<li class="nav-item "><a href="./10-dropdowns-hover-copy.html">Dropdowns On Hover</a></li>
-											
 												<li class="nav-item "><a href="./11-pages-in-subfolders.html">Pages in subfolders</a></li>
 											
 												<li class="nav-item "><a href="./12-using-sass.html">Using Sass</a></li>
@@ -121,6 +119,8 @@
 												<li class="nav-item "><a href="./13-disable-plugin-autoloading.html">Disable autoloading for plugin assets</a></li>
 											
 												<li class="nav-item "><a href="./14-javascript-api.html">Javascript API</a></li>
+											
+												<li class="nav-item "><a href="./15-unusedcss.html">Removing unused assets</a></li>
 											
 										</ol>
 									</li>
@@ -161,8 +161,9 @@
 							</ul>
 							<hr class="my-3" />
 							<p>
+								<small>Theme version: 3.0.12</small><br />
 								<small>Docs version: 1.0</small><br />
-								<small>Docs updated: 2018-01-02</small><br />
+								<small>Docs updated: 2018-01-09</small><br />
 							<small><a href="https://thomjjames.github.io/appstrap-docs/docs-dist.zip">Download docs</a></small>
 							</p>
 						</nav>
@@ -271,23 +272,6 @@
 					,
 					
 
-					"10-dropdowns-hover-copy-html": {
-						"id": "10-dropdowns-hover-copy-html",
-						"title": "Dropdowns On Hover",
-						"category": "",
-						"url": " /10-dropdowns-hover-copy.html",
-						"content": "Since AppStrap 2.4 drop down menus show on hover. \nWhen adding new drop down menus simply add data-toggle=\"dropdown\" data-hover=\"dropdown\" to the trigger link make them show on hover instead of click.\nFor submenus you should include data-close-others=\"false\" so the parent menu is not closed when hovering a submenu.\n\nTo revert to using “click” drop down simple remove the usage of data-hover=\"dropdown\" on drop down trigger links.\n\nSee https://github.com/CWSpear/bootstrap-hover-dropdown for more info."
-					}
-
-					
-				
-			
-		
-			
-				
-					,
-					
-
 					"11-pages-in-subfolders-html": {
 						"id": "11-pages-in-subfolders-html",
 						"title": "Pages in subfolders",
@@ -345,6 +329,23 @@
 						"category": "",
 						"url": " /14-javascript-api.html",
 						"content": "The /assets/js/custom-script.js allows you to override plugin functions within AppStrap as well as add your own plugin definitions using AppStrap to load in the theme assets.\n\nYou can also use the AppStrap Javascript API to react to javascript events in AppStrap:\n\n\n  themePreload: Before any AppStrap Javascript has run\n  themePrePlugins: Before any AppStrap Javascript has run\n  themeLoaded: After the theme has loaded everything\n\n\nSee assets/js/custom-script.js for example code."
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"15-unusedcss-html": {
+						"id": "15-unusedcss-html",
+						"title": "Removing unused assets",
+						"category": "",
+						"url": " /15-unusedcss.html",
+						"content": "Assets/Files used per page\n\nAt the top of page HTML file and within /assets/assets-map.txt files you will find a list of all CSS, Javascript (not dynamically loaded ones) and images needed for each page.\nThis is to help you remove unneeded assets as you customise your site.\n\nCSS\n\nThanks to the awesomeness of Gulp and purifycss you can now streamline your final CSS code before you launch your site.\n\nOnce you’ve done developing your site or at any point you like simply do the following:\n\n\n  Remove any unused .html files from the site root\n  In terminal, run command: gulp unused-css\n\n\nThis will compare the CSS selectors used in the HTML files with the CSS in the CSS files (assets/css) and remove any CSS not being used."
 					}
 
 					
@@ -514,7 +515,7 @@
 						"title": "Theme info",
 						"category": "",
 						"url": " /theme-info.html",
-						"content": "Name: AppStrap Bootstrap 4 Theme\n  Version 3.0.10\n  Created: Jan 2013\n  Updated: Dec 22rd 2017\n  Bootstrap version: 4.0.0-beta.2\n\n\nTheme Credits\n\n\n  Slideshow graphics: http://medialoot.com &amp; http://www.premiumpixels.com/\n  Team photos: http://www.flickr.com/photos/vectorportal/sets/72157622868867274/\n  Blog photos: http://www.flickr.com/photos/xjrlokix/ (Ben Fredericson)\n  Patterns: http://subtlepatterns.com/\n  Backstretch photos: http://unsplash.com\n  About me photo: https://www.flickr.com/photos/anseledwardsphotography/\n  Flag icons: http://lipis.github.io/flag-icon-css/\n  Card photos: https://picjumbo.com\n  Shop &amp; other photos: https://unsplash.com/\n  Loading graphics/plugin: http://joaopereirawd.github.io/fakeLoader.js/\n  Videos: https://www.youtube.com/watch?v=qOfuTI5165w\n  Videos &amp; photos: https://pixabay.com\n  Photos: pexels.com\n  Photos: stocksnap.io"
+						"content": "Name: AppStrap Bootstrap 4 Theme\n  Version 3.0.12\n  Created: Jan 2013\n  Updated: Jan 9th 2018\n  Bootstrap version: 4.0.0-beta.3\n\n\nTheme Credits\n\n\n  Slideshow graphics: http://medialoot.com &amp; http://www.premiumpixels.com/\n  Team photos: http://www.flickr.com/photos/vectorportal/sets/72157622868867274/\n  Blog photos: http://www.flickr.com/photos/xjrlokix/ (Ben Fredericson)\n  Patterns: http://subtlepatterns.com/\n  Backstretch photos: http://unsplash.com\n  About me photo: https://www.flickr.com/photos/anseledwardsphotography/\n  Flag icons: http://lipis.github.io/flag-icon-css/\n  Card photos: https://picjumbo.com\n  Shop &amp; other photos: https://unsplash.com/\n  Loading graphics/plugin: http://joaopereirawd.github.io/fakeLoader.js/\n  Videos: https://www.youtube.com/watch?v=qOfuTI5165w\n  Videos &amp; photos: https://pixabay.com\n  Photos: pexels.com\n  Photos: stocksnap.io"
 					}
 
 					
@@ -567,6 +568,6 @@
 		
 		<!-- Scripts -->
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
 	</body>
 </html>
