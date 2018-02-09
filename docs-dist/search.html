@@ -146,6 +146,8 @@
 										<a href="./changelog.html">Changelog</a>
 										<ul>
 											
+												<li class="nav-item "><a href="./3.1.0-upgrade.html">3.1.0 Upgrade</a></li>
+											
 												<li class="nav-item "><a href="./3.0.12-upgrade.html">3.0.12 Upgrade</a></li>
 											
 												<li class="nav-item "><a href="./3.0.11-upgrade.html">3.0.11 Upgrade</a></li>
@@ -163,9 +165,9 @@
 							</ul>
 							<hr class="my-3" />
 							<p>
-								<small>Theme version: 3.0.12</small><br />
+								<small>Theme version: 3.1.0</small><br />
 								<small>Docs version: 1.0</small><br />
-								<small>Docs updated: 2018-01-09</small><br />
+								<small>Docs updated: 2018-02-09</small><br />
 							<small><a href="https://thomjjames.github.io/appstrap-docs/docs-dist.zip">Download docs</a></small>
 							</p>
 						</nav>
@@ -274,6 +276,23 @@
 					,
 					
 
+					"3-1-0-upgrade-html": {
+						"id": "3-1-0-upgrade-html",
+						"title": "3.1.0 Upgrade",
+						"category": "",
+						"url": " /3.1.0-upgrade.html",
+						"content": "Replace the following files/snippets:\n\n\n  Replace: assets/js/ directory\n  Replace: assets/css/* files\n  Replace: theme/gulpfile.js\n  Replace: assets/scss/*\n  Replace: all usage of Font Awesome icons, see: https://fontawesome.com/how-to-use/upgrading-from-4\n  Replace: .progress-bar-sm is now .progress-sm and added to the .progress element\n  Replace: .progress-bar-lg is now .progress-lg and added to the .progress element\n  Replace: .font-BREAKPOINT-xSIZE is now .text-BREAKPOINT-xSIZE\n\n\nChanges:\n\n\n  UPDATED: Updated to Bootstrap 4.0.0!\n  UPDATED: Update to Font Awesome 5! See: https://fontawesome.com/how-to-use/upgrading-from-4\n  UPDATED: Rewrote Javascript into source files to make it easier to remove plugins and customise using Gulp. Don’t want a plugin, just remove it from the js/src/plugins folder\n  UPDATED: Updated highlight.js to 9.12.0\n  UPDATED: Updated jQuery Zoom to 1.7.20\n  UPDATED: Updated imagesLoaded to 4.1.4\n  UPDATED: Updated jquery.nicescroll to 3.7.6\n  UPDATED: Updated .font-BREAKPOINT-xSIZE to .text-BREAKPOINT-xSIZE\n  BUGFIX: Progress bar fixes\n  BUGFIX: Sass fix for duplicate .h-auto &amp; .w-auto classes\n  BUGFIX: Fixed scroll issue on jPanel menu with fixed header"
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
 					"1-override-colours-html": {
 						"id": "1-override-colours-html",
 						"title": "Overriding Colours",
@@ -347,7 +366,7 @@
 						"title": "Javascript API",
 						"category": "",
 						"url": " /14-javascript-api.html",
-						"content": "The /assets/js/custom-script.js allows you to override plugin functions within AppStrap as well as add your own plugin definitions using AppStrap to load in the theme assets.\n\nYou can also use the AppStrap Javascript API to react to javascript events in AppStrap:\n\n\n  themePreload: Before any AppStrap Javascript has run\n  themePrePlugins: Before any AppStrap Javascript has run\n  themeLoaded: After the theme has loaded everything\n\n\nSee assets/js/custom-script.js for example code."
+						"content": "The /assets/js/custom-script.js allows you to override plugin functions within AppStrap as well as add your own plugin definitions using AppStrap to load in the theme assets.\n\nYou can also use the AppStrap Javascript API to react to javascript events in AppStrap:\n\n\n  themePreload: Before any AppStrap Javascript has run\n  themePrePlugins: Before any AppStrap Javascript has run\n  themeLoaded: After the theme has loaded everything\n  themePluginsExtras: Add new plugin integrations or override existing ones.\n\n\nSee assets/js/custom-script.js for example code."
 					}
 
 					
@@ -364,7 +383,7 @@
 						"title": "Removing unused assets",
 						"category": "",
 						"url": " /15-unusedcss.html",
-						"content": "Assets/Files used per page\n\nAt the top of page HTML file and within /assets/assets-map.txt files you will find a list of all CSS, Javascript (not dynamically loaded ones) and images needed for each page.\nThis is to help you remove unneeded assets as you customise your site.\n\nCSS\n\nThanks to the awesomeness of Gulp and purifycss you can now streamline your final CSS code before you launch your site.\n\nOnce you’ve done developing your site or at any point you like simply do the following:\n\n\n  Remove any unused .html files from the site root\n  In terminal, run command: gulp unused-css\n\n\nThis will compare the CSS selectors used in the HTML files with the CSS in the CSS files (assets/css) and remove any CSS not being used."
+						"content": "Assets/Files used per page\n\nAt the top of page HTML file and within /assets/assets-map.txt files you will find a list of all CSS, Javascript (not dynamically loaded ones) and images needed for each page.\nThis is to help you remove unneeded assets as you customise your site.\n\nCSS\n\nThanks to the awesomeness of Gulp and purifycss you can now streamline your final CSS code before you launch your site.\n\nOnce you’ve done developing your site or at any point you like simply do the following:\n\n\n  Remove any unused .html files from the site root\n  In terminal, run command: gulp unused-css\n\n\nThis will compare the CSS selectors used in the HTML files with the CSS in the CSS files (assets/css) and remove any CSS not being used.\n\nJavascript Plugins\n\nWe use Gulp to pull all our .js files together into script.s &amp; script.min.js. This means you can since version 3.1.0 easier remove plugins you don’t need simply by deleting them from the assets/js/src/plugins directory or by changing the .js file extension."
 					}
 
 					
@@ -534,7 +553,7 @@
 						"title": "Theme info",
 						"category": "",
 						"url": " /theme-info.html",
-						"content": "Name: AppStrap Bootstrap 4 Theme\n  Version 3.0.12\n  Created: Jan 2013\n  Updated: Jan 9th 2018\n  Bootstrap version: 4.0.0-beta.3\n\n\nTheme Credits\n\n\n  Slideshow graphics: http://medialoot.com &amp; http://www.premiumpixels.com/\n  Team photos: http://www.flickr.com/photos/vectorportal/sets/72157622868867274/\n  Blog photos: http://www.flickr.com/photos/xjrlokix/ (Ben Fredericson)\n  Patterns: http://subtlepatterns.com/\n  Backstretch photos: http://unsplash.com\n  About me photo: https://www.flickr.com/photos/anseledwardsphotography/\n  Flag icons: http://lipis.github.io/flag-icon-css/\n  Card photos: https://picjumbo.com\n  Shop &amp; other photos: https://unsplash.com/\n  Loading graphics/plugin: http://joaopereirawd.github.io/fakeLoader.js/\n  Videos: https://www.youtube.com/watch?v=qOfuTI5165w\n  Videos &amp; photos: https://pixabay.com\n  Photos: pexels.com\n  Photos: stocksnap.io"
+						"content": "Name: AppStrap Bootstrap 4 Theme\n  Version 3.1.0\n  Created: Jan 2013\n  Updated: Feb 9th 2018\n  Bootstrap version: 4.0.0\n\n\nTheme Credits\n\n\n  Slideshow graphics: http://medialoot.com &amp; http://www.premiumpixels.com/\n  Team photos: http://www.flickr.com/photos/vectorportal/sets/72157622868867274/\n  Blog photos: http://www.flickr.com/photos/xjrlokix/ (Ben Fredericson)\n  Patterns: http://subtlepatterns.com/\n  Backstretch photos: http://unsplash.com\n  About me photo: https://www.flickr.com/photos/anseledwardsphotography/\n  Flag icons: http://lipis.github.io/flag-icon-css/\n  Card photos: https://picjumbo.com\n  Shop &amp; other photos: https://unsplash.com/\n  Loading graphics/plugin: http://joaopereirawd.github.io/fakeLoader.js/\n  Videos: https://www.youtube.com/watch?v=qOfuTI5165w\n  Videos &amp; photos: https://pixabay.com\n  Photos: pexels.com\n  Photos: stocksnap.io"
 					}
 
 					
