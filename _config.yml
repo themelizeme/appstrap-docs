@@ -80,148 +80,154 @@ defaults:
 _theme:
   name: AppStrap Bootstrap 4 Theme
   short_name: AppStrap
-  description: AppStrap is a fully responsive business or app bundle containing a massive 130 templates built with **Bootstrap 4.0.0** using the latest HTML5 & CSS3 techniques. Full flexbox support, modular structure (reuse blocks & widgets on any page), Sass & gulp integration (customise to suite your needs), one pagers, homepage variations, Shop UI & more!
-  version: 3.1.3
+  description: AppStrap is a fully responsive business or app bundle containing a massive 139 templates built with **Bootstrap 4.1.1** using the latest HTML5 & CSS3 techniques. Full flexbox support, modular structure (reuse blocks & widgets on any page), Sass & gulp integration (customise to suite your needs), one pagers, homepage variations, Shop UI & more!
+  version: 3.2
   buy_link: "https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme"
   preview_link: "https://wrapbootstrap.com/preview/WB0C6D0H4?ref=tme"
-  bootstrap_version: "4.0.0"
+  bootstrap_version: "4.1.1"
   created: Jan 2013
-  updated: May 21st 2018
-  demo_path: http://demos.themelize.me/appstrap3.1.2/theme/
+  updated: May 31st 2018
+  demo_path: http://demos.themelize.me/appstrap3.2/theme/
   pages:
-  - intro.html: Welcome To AppStrap
-  - index.html: Homepage (default)
-  - index-static.html: Homepage No Slider
-  - index-boxed.html: Homepage Boxed
-  - index-promo-header.html: Promo Header
-  - index-coming-soon.html: Coming Soon
-  - index-coming-soon-newsletter.html: Coming Soon with newsletter
-  - demo-travel-blog.html: Travel Blog
-  - demo-travel-blog-post.html: Travel Blog
-  - index-app-landing.html: App Landing Page
-  - index-music.html: Music Homepage
-  - index-magazine.html: Magazine Homepage
-  - index-event.html: Event Homepage
-  - index-gym.html: Gym Homepage
-  - index-jobs.html: Jobs Homepage
-  - index-corporate.html: Corporate Homepage
-  - index-restaurant.html: Restaurant Homepage
-  - index-photographer.html: Photographer Homepage
-  - index-freelancer-portfolio.html: Freelancer Homepage
-  - index-onepager.html: One Pager Slideshow
-  - index-onepager-image.html: One Pager Image
-  - index-onepager-image-full-height.html: One Pager Image Full Height
-  - index-onepager-bg-slideshow.html: One Pager Background Slideshow
-  - portfolio.html: Portfolio
-  - blog.html: Blog
-  - blog-leftbar.html: Blog Left Sidebar
-  - blog-timeline.html: Blog Timeline
-  - blog-grid.html: Blog Grid
-  - blog-post.html: Blog Post
-  - blog-post-slideshow.html: Blog Post
-  - blog-post-video.html: Blog Post
-  - blog-post-audio.html: Blog Post
-  - about.html: About Basic
-  - about-extended.html: About Extended
-  - about-me.html: About Me
-  - team.html: Team (list)
-  - team-grid.html: Team (grid)
-  - team-member.html: Team Member
-  - contact.html: Contact
-  - pricing.html: Pricing Plans
-  - pricing-tables.html: Pricing Comparison Tables
-  - timeline.html: Timeline
-  - timeline-left.html: Timeline Left
-  - timeline-right.html: Timeline Right
-  - timeline-stacked.html: Timeline Stacked
-  - customers.html: Customers
-  - faqs.html: FAQs
-  - features.html: Features
-  - login.html: Login
-  - signup.html: Sign Up
-  - starter.html: Starter Template
-  - 404.html: 404 Error
-  - flexslider-default.html: Flexslider
-  - flexslider-full.html: Flexslider Full Width
-  - flexslider-behind.html: Flexslider Behind Header
-  - flexslider-boxed.html: Flexslider Boxed
-  - slider-revolution-default.html: Slider Revolution (as homepage)
-  - slider-revolution-full.html: Slider Revolution Full Width
-  - slider-revolution-behind.html: Slider Revolution Behind Header
-  - slider-revolution-boxed.html: Slider Revolution Boxed
-  - backstretch.html: Backstretch Slider
-  - backstretch-boxed.html: Backstretch Slider Boxed
-  - colours.html: Theme Colour Options
-  - grid.html: Grids
-  - flexbox.html: Flexbox
-  - footer-light.html: Footer Light
-  - footer-compact.html: Footer Compact
-  - footer-menus.html: Footer Menus
-  - footer-compact-light.html: Footer Compact Light
-  - footer-menus-light.html: Footer Menus Light
-  - header-elements.html: Header Elements
-  - header-offcanvas.html: Header Off Canvas
-  - header-collapse-menu.html: Header Collapse Menu
-  - header-overlay-menu-responsive.html: Header Responsive Overlay Menu
-  - header-overlay-menu.html: Header Overlay Menu
-  - header-collapse-menu-responsive.html: Header Responsive Collapse Menu
-  - header-fullwidth.html: Header Full Width
-  - header-navbar-below.html: Header Navbar Below
-  - header-compact.html: Header Compact
-  - header-dark.html: Header Dark
-  - header-primary.html: Header Primary
-  - header-transparent.html: Header Transparent
-  - header-transparent-dark.html: Header Transparent Dark
-  - header-transparent-primary.html: Header Transparent Primary
-  - header-translucent.html: Header Translucent
-  - header-translucent-dark.html: Header Translucent Dark
-  - header-translucent-primary.html: Header Translucent Primary
-  - header-nav-left.html: Header Nav Left
-  - header-nav-fullheight.html: Header Nav Full Height
-  - header-bottom.html: Header Bottom
-  - elements.html: Theme Elements
-  - elements-dividers.html: Dividers
-  - elements-buttons.html: Buttons
-  - elements-button-groups.html: Button Groups
-  - elements-progressbars.html: Progress Bars
-  - elements-tooltips-popovers.html: Tooltips & Popovers
-  - elements-alerts.html: Alerts
-  - elements-spacers.html: Spacers
-  - elements-list-groups.html: List Groups
-  - elements-collapse.html: Collapse / Accordions
-  - elements-carousels.html: Carousels
-  - elements-dropdowns.html: Dropdowns
-  - elements-modals.html: Modals
-  - elements-modals-onload.html: Modals Onload
-  - elements-navs.html: Navs
-  - elements-navs-tabbable.html: Tabbable Navs
-  - elements-typography.html: Typography
-  - elements-social-media.html: Social Media Branding
-  - elements-colour-utils.html: Colours Utils
-  - elements-icons.html: Icons
-  - elements-icons-fontawesome.html: Icons - Font Awesome
-  - elements-icons-ionicons.html: Icons - Ionicons
-  - elements-icons-linearicons.html: Icons - Linearicons
-  - elements-icons-flags.html: Icons - Flags
-  - elements-tables.html: Tables
-  - elements-badges.html: Badges
-  - elements-cards.html: Cards
-  - elements-forms.html: Forms
-  - elements-forms-input-groups.html: Forms Input Groups
-  - elements-utils.html: Utilities
-  - elements-video-blocks.html: Video Blocks
-  - elements-ctas.html: Call To Action Blocks
-  - elements-overlays.html: Overlays
-  - elements-animation.html: Animations
-  - elements-counters.html: Counters
-  - elements-type-effect.html: Type Effect
-  - shop.html: Shop Homepage
-  - shop-grid.html: Products Grid
-  - shop-list.html: Products List
-  - shop-product.html: Product View
-  - shop-cart.html: Cart
-  - shop-checkout.html: Checkout
-  - shop-confirmation.html: Confirmation
+    - intro.html: Welcome To AppStrap
+    - index.html: Homepage (default)
+    - index-static.html: Homepage No Slider
+    - index-boxed.html: Homepage Boxed
+    - index-promo-header.html: Promo Header
+    - index-coming-soon.html: Coming Soon
+    - index-coming-soon-newsletter.html: Coming Soon with newsletter
+    - demo-travel-blog.html: Travel Blog
+    - demo-travel-blog-post.html: Travel Blog
+    - index-app-landing.html: App Landing Page
+    - index-music.html: Music Homepage
+    - index-event.html: Event Homepage
+    - index-gym.html: Gym Homepage
+    - index-jobs.html: Jobs Homepage
+    - index-corporate.html: Corporate Homepage
+    - index-restaurant.html: Restaurant Homepage
+    - index-photographer.html: Photographer Homepage
+    - index-freelancer-portfolio.html: Freelancer Homepage
+    - index-onepager.html: One Pager Slideshow
+    - index-onepager-image.html: One Pager Image
+    - index-onepager-image-full-height.html: One Pager Image Full Height
+    - index-onepager-bg-slideshow.html: One Pager Background Slideshow
+    - portfolio.html: Portfolio
+    - blog.html: Blog
+    - blog-leftbar.html: Blog Left Sidebar
+    - blog-timeline.html: Blog Timeline
+    - blog-grid.html: Blog Grid
+    - blog-post.html: Blog Post
+    - blog-post-slideshow.html: Blog Post
+    - blog-post-video.html: Blog Post
+    - blog-post-audio.html: Blog Post
+    - about.html: About Basic
+    - about-extended.html: About Extended
+    - about-me.html: About Me
+    - team.html: Team (list)
+    - team-grid.html: Team (grid)
+    - team-member.html: Team Member
+    - contact.html: Contact
+    - pricing.html: Pricing Plans
+    - pricing-tables.html: Pricing Comparison Tables
+    - timeline.html: Timeline
+    - timeline-left.html: Timeline Left
+    - timeline-right.html: Timeline Right
+    - timeline-stacked.html: Timeline Stacked
+    - customers.html: Customers
+    - faqs.html: FAQs
+    - features.html: Features
+    - login.html: Login
+    - signup.html: Sign Up
+    - starter.html: Starter Template
+    - flexslider-default.html: Flexslider
+    - flexslider-full.html: Flexslider Full Width
+    - flexslider-behind.html: Flexslider Behind Header
+    - flexslider-boxed.html: Flexslider Boxed
+    - slider-revolution-default.html: Slider Revolution (as homepage)
+    - slider-revolution-full.html: Slider Revolution Full Width
+    - slider-revolution-behind.html: Slider Revolution Behind Header
+    - slider-revolution-boxed.html: Slider Revolution Boxed
+    - backstretch.html: Backstretch Slider
+    - backstretch-boxed.html: Backstretch Slider Boxed
+    - colours.html: Theme Colour Options
+    - grid.html: Grids
+    - flexbox.html: Flexbox
+    - footer-light.html: Footer Light
+    - footer-compact.html: Footer Compact
+    - footer-menus.html: Footer Menus
+    - footer-compact-light.html: Footer Compact Light
+    - footer-menus-light.html: Footer Menus Light
+    - header-elements.html: Header Elements
+    - header-offcanvas.html: Header Off Canvas
+    - header-collapse-menu.html: Header Collapse Menu
+    - header-overlay-menu-responsive.html: Header Responsive Overlay Menu
+    - header-overlay-menu.html: Header Overlay Menu
+    - header-collapse-menu-responsive.html: Header Responsive Collapse Menu
+    - header-fullwidth.html: Header Full Width
+    - header-navbar-below.html: Header Navbar Below
+    - header-compact.html: Header Compact
+    - header-dark.html: Header Dark
+    - header-primary.html: Header Primary
+    - header-transparent.html: Header Transparent
+    - header-transparent-dark.html: Header Transparent Dark
+    - header-transparent-primary.html: Header Transparent Primary
+    - header-translucent.html: Header Translucent
+    - header-translucent-dark.html: Header Translucent Dark
+    - header-translucent-primary.html: Header Translucent Primary
+    - header-nav-left.html: Header Nav Left
+    - header-nav-fullheight.html: Header Nav Full Height
+    - header-bottom.html: Header Bottom
+    - elements.html: Theme Elements
+    - elements-shadows.html: Shadows
+    - elements-dividers.html: Dividers
+    - elements-buttons.html: Buttons
+    - elements-button-groups.html: Button Groups
+    - elements-progressbars.html: Progress Bars
+    - elements-tooltips-popovers.html: Tooltips & Popovers
+    - elements-alerts.html: Alerts
+    - elements-spacers.html: Spacers
+    - elements-list-groups.html: List Groups
+    - elements-collapse.html: Collapse / Accordions
+    - elements-carousels.html: Carousels
+    - elements-dropdowns.html: Dropdowns
+    - elements-modals.html: Modals
+    - elements-modals-onload.html: Modals Onload
+    - elements-navs.html: Navs
+    - elements-navs-tabbable.html: Tabbable Navs
+    - elements-typography.html: Typography
+    - elements-social-media.html: Social Media Branding
+    - elements-colour-utils.html: Colours Utils
+    - elements-icons.html: Icons
+    - elements-icons-fontawesome.html: Icons - Font Awesome
+    - elements-icons-lineawesome.html: Icons - Line Awesome
+    - elements-icons-ionicons.html: Icons - Ionicons
+    - elements-icons-linearicons.html: Icons - Linearicons
+    - elements-icons-flags.html: Icons - Flags
+    - elements-tables.html: Tables
+    - elements-badges.html: Badges
+    - elements-cards.html: Cards
+    - elements-forms.html: Forms
+    - elements-forms-input-groups.html: Forms Input Groups
+    - elements-utils.html: Utilities
+    - elements-video-blocks.html: Video Blocks
+    - elements-ctas.html: Call To Action Blocks
+    - elements-overlays.html: Overlays
+    - elements-animation.html: Animations
+    - elements-counters.html: Counters
+    - elements-type-effect.html: Type Effect
+    - shop.html: Shop Homepage
+    - shop-grid.html: Products Grid
+    - shop-list.html: Products List
+    - shop-product.html: Product View
+    - shop-cart.html: Cart
+    - shop-checkout.html: Checkout
+    - shop-confirmation.html: Confirmation
+    - index-wedding.html: Wedding Homepage
+    - index-realestate-single.html: Real Estate (Single) Homepage
+    - index-technology.html: Technology Homepage
+    - index-forum.html: Forum Homepage
+    - index-charity.html: Charity Homepage
+    - index-magazine.html: Magazine Homepage
 
 
 types:
