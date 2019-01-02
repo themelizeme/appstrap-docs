@@ -16,17 +16,19 @@
 
 		<link type="application/atom+xml" rel="alternate" href="https://github.com/thomjjames/appstrap-docs/feed.xml" title="AppStrap Docs" />
 		<!-- Begin Jekyll SEO tag v2.3.0 -->
-<title>Welcome | AppStrap Docs</title>
-<meta property="og:title" content="Welcome" />
+<title>3.3.1 Upgrade | AppStrap Docs</title>
+<meta property="og:title" content="3.3.1 Upgrade" />
 <meta name="author" content="Themelize.me" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="AppStrap Bootstrap 4 Theme Documentation" />
-<meta property="og:description" content="AppStrap Bootstrap 4 Theme Documentation" />
-<link rel="canonical" href="https://github.com/thomjjames/appstrap-docs/" />
-<meta property="og:url" content="https://github.com/thomjjames/appstrap-docs/" />
+<meta name="description" content="Upgrade to Bootstrap 4.2.1, see https://github.com/twbs/bootstrap/issues/26952 and https://blog.getbootstrap.com/2018/12/21/bootstrap-4-2-1/ for official Bootstrap docs." />
+<meta property="og:description" content="Upgrade to Bootstrap 4.2.1, see https://github.com/twbs/bootstrap/issues/26952 and https://blog.getbootstrap.com/2018/12/21/bootstrap-4-2-1/ for official Bootstrap docs." />
+<link rel="canonical" href="https://github.com/thomjjames/appstrap-docs/3.3.1-upgrade.html" />
+<meta property="og:url" content="https://github.com/thomjjames/appstrap-docs/3.3.1-upgrade.html" />
 <meta property="og:site_name" content="AppStrap Docs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-01-02T00:00:00+01:00" />
 <script type="application/ld+json">
-{"name":"AppStrap Bootstrap 4 Theme Docs","description":"AppStrap Bootstrap 4 Theme Documentation","author":{"@type":"Person","name":"Themelize.me"},"@type":"WebSite","url":"https://github.com/thomjjames/appstrap-docs/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://github.com/thomjjames/appstrap-docs/siteicon.png"},"name":"Themelize.me"},"image":null,"headline":"Welcome","dateModified":null,"datePublished":null,"sameAs":["https://github.com/thomjjames/appstrap-docs"],"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+{"name":null,"description":"Upgrade to Bootstrap 4.2.1, see https://github.com/twbs/bootstrap/issues/26952 and https://blog.getbootstrap.com/2018/12/21/bootstrap-4-2-1/ for official Bootstrap docs.","author":{"@type":"Person","name":"Themelize.me"},"@type":"Article","url":"https://github.com/thomjjames/appstrap-docs/3.3.1-upgrade.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://github.com/thomjjames/appstrap-docs/siteicon.png"},"name":"Themelize.me"},"image":null,"headline":"3.3.1 Upgrade","dateModified":"2019-01-02T00:00:00+01:00","datePublished":"2019-01-02T00:00:00+01:00","sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -54,7 +56,7 @@
 			
 						<nav class="full-navigation mt-4">
 							<ul class="nav">
-								<li class="nav-item top-level current">
+								<li class="nav-item top-level ">
 									
 									<a href="./">Welcome</a>
 								</li>
@@ -139,14 +141,14 @@
 									
 								
 									 
-									<li class="nav-item top-level ">
+									<li class="nav-item top-level current">
 										
 										
 										
 										<a href="./changelog.html">Changelog</a>
 										<ul>
 											
-												<li class="nav-item "><a href="./3.3.1-upgrade.html">3.3.1 Upgrade</a></li>
+												<li class="nav-item current"><a href="./3.3.1-upgrade.html">3.3.1 Upgrade</a></li>
 											
 												<li class="nav-item "><a href="./3.3.0-upgrade.html">3.3.0 Upgrade</a></li>
 											
@@ -190,23 +192,38 @@
 		
 				<section class="main col-lg-9" id="main">
 					<div class="page-header">
-						<h2>AppStrap Docs</h2>
-						<h3>Welcome</h3>
+						<h2>Changelog</h2>
+						<h3>3.3.1 Upgrade</h3>
 					</div>
 					<article class="content">
-						<p>Welcome to the <strong>AppStrap Bootstrap 4 Theme</strong> documentation subsite. Here you’ll find everything you need to get to know to use and customise AppStrap.</p>
+						<p>Upgrade to Bootstrap 4.2.1, see https://github.com/twbs/bootstrap/issues/26952 and https://blog.getbootstrap.com/2018/12/21/bootstrap-4-2-1/ for official Bootstrap docs.</p>
 
-<blockquote>
-  <p>If you don’t find what you’re after here and you always <a href="mailto:info@themelize.me">email us</a>.</p>
-</blockquote>
+<h3 id="replace-the-following-filessnippets">Replace the following files/snippets:</h3>
 
-<h3 id="about-appstrap">About AppStrap</h3>
+<ul>
+  <li>Replace: reference to all Bootstrap 4.2.1 CSS and Javascript files in head &amp; footer.</li>
+  <li>Using command line within the /theme folder, run: <code>yarn</code></li>
+</ul>
 
-<p>AppStrap is a fully responsive business or app bundle containing a massive 145 templates built with <strong>Bootstrap 4.2.1</strong> using the latest HTML5 &amp; CSS3 techniques. Full flexbox support, modular structure (reuse blocks &amp; widgets on any page), Sass &amp; gulp integration (customise to suite your needs), one pagers, homepage variations, Shop UI &amp; more!</p>
+<h3 id="changes">Changes:</h3>
 
-<blockquote>
-  <p><strong>Don’t have AppStrap Bootstrap 4 Theme? <a href="https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme">Buy it out</a></strong>.</p>
-</blockquote>
+<ul>
+  <li><strong>New:</strong> Added a new <a href="http://demos.themelize.me/appstrap3.3.1/theme/elements-spinners.html">spinner loading component</a>.</li>
+  <li><strong>New:</strong> Added new <a href="http://demos.themelize.me/appstrap3.3.1/theme/elements-toasts.html">toast component</a> for displaying notifications.</li>
+  <li><strong>New:</strong> Added a new <a href="http://demos.themelize.me/appstrap3.3.1/theme/elements-forms.html">iOS style switch</a> (a modifier class to our custom checkboxes).</li>
+  <li><strong>New:</strong> Added touch support in our carousel component.</li>
+  <li><strong>New:</strong> Added <code class="highlighter-rouge">.font-weight-lighter</code> and <code class="highlighter-rouge">.font-weight-bolder</code> utilities.</li>
+  <li><strong>New:</strong> Added <code class="highlighter-rouge">.text-decoration-none</code> utility class.</li>
+  <li><strong>New:</strong> Added <code class="highlighter-rouge">.modal-xl</code> modifier class for our modals.</li>
+  <li><strong>New:</strong> Added new negative margin utility classes (e.g., <code class="highlighter-rouge">.mb-n3</code>). These rad new classes not only allow you more control over your general spacing needs, but also allow you to create responsive grid gutters at each breakpoint.</li>
+  <li><strong>New:</strong> Validated form fields now have feedback icons on <code class="highlighter-rouge">:invalid</code> and <code class="highlighter-rouge">:valid</code> fields. Disable them with the <code class="highlighter-rouge">$enable-validation-icons</code> boolean Sass variable (defaults to <code class="highlighter-rouge">true</code>).</li>
+  <li><strong>New:</strong> Tooltips/Popovers work with Shadow DOM.</li>
+  <li><strong>Updated:</strong> Redesigned the custom checkboxes and radios for more obvious states.</li>
+  <li><strong>Updated:</strong> <code class="highlighter-rouge">bootstrap-grid.css</code> now includes our <code class="highlighter-rouge">margin</code> and <code class="highlighter-rouge">padding</code> utilities for full control of our grid system.</li>
+  <li><strong>Updated:</strong> Changed auto columns (e.g., <code class="highlighter-rouge">.col-auto</code>) from <code class="highlighter-rouge">max-width: none</code> to <code class="highlighter-rouge">max-width: 100%</code> to prevent content from causing a column to overflow the parent.</li>
+  <li><strong>Updated:</strong> Improved rendering of custom selects, ranges, file input, and more.</li>
+</ul>
+
 
 					</article>
 				</section>

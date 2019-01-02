@@ -26,9 +26,9 @@
 <meta property="og:url" content="https://github.com/thomjjames/appstrap-docs/12-using-sass.html" />
 <meta property="og:site_name" content="AppStrap Docs" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-11-20T15:31:42+01:00" />
+<meta property="article:published_time" content="2019-01-02T13:31:24+01:00" />
 <script type="application/ld+json">
-{"name":null,"description":"Since AppStrap version 3.0.5 Sass files (.scss) for compile the CSS code have been included to allow quick customisation of the core AppStrap CSS files.","author":{"@type":"Person","name":"Themelize.me"},"@type":"Article","url":"https://github.com/thomjjames/appstrap-docs/12-using-sass.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://github.com/thomjjames/appstrap-docs/siteicon.png"},"name":"Themelize.me"},"image":null,"headline":"Using Sass","dateModified":"2018-11-20T15:31:42+01:00","datePublished":"2018-11-20T15:31:42+01:00","sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+{"name":null,"description":"Since AppStrap version 3.0.5 Sass files (.scss) for compile the CSS code have been included to allow quick customisation of the core AppStrap CSS files.","author":{"@type":"Person","name":"Themelize.me"},"@type":"Article","url":"https://github.com/thomjjames/appstrap-docs/12-using-sass.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://github.com/thomjjames/appstrap-docs/siteicon.png"},"name":"Themelize.me"},"image":null,"headline":"Using Sass","dateModified":"2019-01-02T13:31:24+01:00","datePublished":"2019-01-02T13:31:24+01:00","sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -148,6 +148,8 @@
 										<a href="./changelog.html">Changelog</a>
 										<ul>
 											
+												<li class="nav-item "><a href="./3.3.1-upgrade.html">3.3.1 Upgrade</a></li>
+											
 												<li class="nav-item "><a href="./3.3.0-upgrade.html">3.3.0 Upgrade</a></li>
 											
 												<li class="nav-item "><a href="./3.2.1-upgrade.html">3.2.1 Upgrade</a></li>
@@ -179,9 +181,9 @@
 							</ul>
 							<hr class="my-3" />
 							<p>
-								<small>Theme version: 3.3.0</small><br />
+								<small>Theme version: 3.3.1</small><br />
 								<small>Docs version: 1.0</small><br />
-								<small>Docs updated: 2018-11-20</small><br />
+								<small>Docs updated: 2019-01-02</small><br />
 							<small><a href="https://thomjjames.github.io/appstrap-docs/docs-dist.zip">Download docs</a></small>
 							</p>
 						</nav>
@@ -221,13 +223,13 @@
 
 <p>Type <code>gulp -v</code> to ensure gulp installed correctly, if it did you’ll see something like:</p>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="o">[</span>13:42:05] CLI version 3.9.1<br data-jekyll-commonmark-ghpages="" /><span class="o">[</span>13:42:05] Local version 3.9.1</code></pre></figure>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="o">[</span>13:42:05] CLI version 2.0.1<br data-jekyll-commonmark-ghpages="" /><span class="o">[</span>13:42:05] Local version 3.9.1</code></pre></figure>
 
 <h5 id="step-3">Step 3)</h5>
 
-<p>Type the following command to install all the gulp dependencies defined by the package.json file:</p>
+<p>Type the following command to install all the gulp dependencies defined by the package.json file (NOTE: We will be upgrading to gulp 4.x in the near future so the @3.9.1 part is required at the moment):</p>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">npm install <span class="nt">--save-dev</span> gulp</code></pre></figure>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">npm install <span class="nt">--save-dev</span> gulp@3.9.1</code></pre></figure>
 
 <p>If everything work correctly you should see a new directory called <kbd>node_modules</kbd> which is full of the dependencies gulp needs to function. Once you’ve finished your development you can remove this directory and just run the above command again to get the latest dependencies each time.</p>
 
