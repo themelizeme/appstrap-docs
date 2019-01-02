@@ -32,16 +32,16 @@ npm install --global gulp-cli
 Type <code>gulp -v</code> to ensure gulp installed correctly, if it did you'll see something like:
 
 {% highlight shell %}
-[13:42:05] CLI version 3.9.1
+[13:42:05] CLI version 2.0.1
 [13:42:05] Local version 3.9.1
 {% endhighlight %}
 
 ##### Step 3)
 
-Type the following command to install all the gulp dependencies defined by the package.json file: 
+Type the following command to install all the gulp dependencies defined by the package.json file (NOTE: We will be upgrading to gulp 4.x in the near future so the @3.9.1 part is required at the moment): 
 
 {% highlight shell %}
-npm install --save-dev gulp
+npm install --save-dev gulp@3.9.1
 {% endhighlight %}
 
 If everything work correctly you should see a new directory called <kbd>node_modules</kbd> which is full of the dependencies gulp needs to function. Once you've finished your development you can remove this directory and just run the above command again to get the latest dependencies each time.
