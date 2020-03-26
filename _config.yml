@@ -81,13 +81,13 @@ _theme:
   name: AppStrap Bootstrap 4 Theme
   short_name: AppStrap
   description: AppStrap is a fully responsive business or app bundle containing a massive 145 templates built with **Bootstrap 4.4.1** using the latest HTML5 & CSS3 techniques. Full flexbox support, modular structure (reuse blocks & widgets on any page), Sass & gulp integration (customise to suite your needs), one pagers, homepage variations, Shop UI & more!
-  version: 3.3.3
+  version: 3.3.4
   buy_link: "https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme"
   preview_link: "https://wrapbootstrap.com/preview/WB0C6D0H4?ref=tme"
   bootstrap_version: "4.4.1"
   created: Jan 2013
-  updated: Jan 21st 2020
-  demo_path: http://demos.themelize.me/appstrap3.3.3/theme/
+  updated: Mar 25th 2020
+  demo_path: http://demos.themelize.me/appstrap3.3.4/theme/
   pages:
     - intro.html: Welcome To AppStrap
     - index.html: Homepage (default)

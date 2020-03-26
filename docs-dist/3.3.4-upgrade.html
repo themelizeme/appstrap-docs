@@ -16,19 +16,19 @@
 
 		<link type="application/atom+xml" rel="alternate" href="https://github.com/thomjjames/appstrap-docs/feed.xml" title="AppStrap Docs" />
 		<!-- Begin Jekyll SEO tag v2.3.0 -->
-<title>Slider Revolution Slider | AppStrap Docs</title>
-<meta property="og:title" content="Slider Revolution Slider" />
+<title>3.3.4 Upgrade | AppStrap Docs</title>
+<meta property="og:title" content="3.3.4 Upgrade" />
 <meta name="author" content="Themelize.me" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Slider Revolution Slider allows for advanced slideshows &amp; animation. You can invoke it using data-toggle=&quot;slider-rev&quot; on the slider element." />
-<meta property="og:description" content="Slider Revolution Slider allows for advanced slideshows &amp; animation. You can invoke it using data-toggle=&quot;slider-rev&quot; on the slider element." />
-<link rel="canonical" href="https://github.com/thomjjames/appstrap-docs/8-slider-revolution.html" />
-<meta property="og:url" content="https://github.com/thomjjames/appstrap-docs/8-slider-revolution.html" />
+<meta name="description" content="Changes:" />
+<meta property="og:description" content="Changes:" />
+<link rel="canonical" href="https://github.com/thomjjames/appstrap-docs/3.3.4-upgrade.html" />
+<meta property="og:url" content="https://github.com/thomjjames/appstrap-docs/3.3.4-upgrade.html" />
 <meta property="og:site_name" content="AppStrap Docs" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-03-26T07:25:37+01:00" />
+<meta property="article:published_time" content="2020-03-25T00:00:00+01:00" />
 <script type="application/ld+json">
-{"url":"https://github.com/thomjjames/appstrap-docs/8-slider-revolution.html","dateModified":"2020-03-26T07:25:37+01:00","datePublished":"2020-03-26T07:25:37+01:00","sameAs":null,"headline":"Slider Revolution Slider","mainEntityOfPage":null,"image":null,"name":null,"author":{"@type":"Person","name":"Themelize.me"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://github.com/thomjjames/appstrap-docs/siteicon.png"},"name":"Themelize.me"},"description":"Slider Revolution Slider allows for advanced slideshows &amp; animation. You can invoke it using data-toggle=&quot;slider-rev&quot; on the slider element.","@type":"Article","@context":"http://schema.org"}</script>
+{"url":"https://github.com/thomjjames/appstrap-docs/3.3.4-upgrade.html","dateModified":"2020-03-25T00:00:00+01:00","datePublished":"2020-03-25T00:00:00+01:00","sameAs":null,"headline":"3.3.4 Upgrade","mainEntityOfPage":null,"image":null,"name":null,"author":{"@type":"Person","name":"Themelize.me"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://github.com/thomjjames/appstrap-docs/siteicon.png"},"name":"Themelize.me"},"description":"Changes:","@type":"Article","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -88,7 +88,7 @@
 									
 								
 									 
-									<li class="nav-item top-level current">
+									<li class="nav-item top-level ">
 										
 										
 										
@@ -110,7 +110,7 @@
 											
 												<li class="nav-item "><a href="./7-flexslider-animations.html">Flexslider Slideshow Animations</a></li>
 											
-												<li class="nav-item current"><a href="./8-slider-revolution.html">Slider Revolution Slider</a></li>
+												<li class="nav-item "><a href="./8-slider-revolution.html">Slider Revolution Slider</a></li>
 											
 												<li class="nav-item "><a href="./9-dropdowns-hover.html">Dropdowns On Hover</a></li>
 											
@@ -141,14 +141,14 @@
 									
 								
 									 
-									<li class="nav-item top-level ">
+									<li class="nav-item top-level current">
 										
 										
 										
 										<a href="./changelog.html">Changelog</a>
 										<ul>
 											
-												<li class="nav-item "><a href="./3.3.4-upgrade.html">3.3.4 Upgrade</a></li>
+												<li class="nav-item current"><a href="./3.3.4-upgrade.html">3.3.4 Upgrade</a></li>
 											
 												<li class="nav-item "><a href="./3.3.3-upgrade.html">3.3.3 Upgrade</a></li>
 											
@@ -198,29 +198,26 @@
 		
 				<section class="main col-lg-9" id="main">
 					<div class="page-header">
-						<h2>Customisation</h2>
-						<h3>Slider Revolution Slider</h3>
+						<h2>Changelog</h2>
+						<h3>3.3.4 Upgrade</h3>
 					</div>
 					<article class="content">
-						<p>Slider Revolution Slider allows for advanced slideshows &amp; animation. 
-You can invoke it using <code>data-toggle="slider-rev"</code> on the slider element.</p>
+						<h3 id="changes">Changes:</h3>
 
-<h3 id="styling">Styling</h3>
+<ul>
+  <li>UPGRADED: Cube Portfolio to 4.4.0</li>
+  <li>FIXED: Grid layout bug in index-photographer.html</li>
+  <li>FIXED: Animated top link fixed</li>
+</ul>
 
-<p>AppStrap applies its own styling to Slider Revolution elements via the <code>.slider-appstrap-theme</code> class which is add via the following line on Slider Revolution pages:</p>
+<h3 id="replace-the-following-filessnippets">Replace the following files/snippets:</h3>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slider-wrapper tp-banner-container"</span> <span class="na">data-page-class=</span><span class="s">"slider-appstrap-theme"</span><span class="nt">&gt;</span></code></pre></figure>
+<ul>
+  <li>Replace: /assets/plugins/cubeportfolio-jquery-plugin/ directory</li>
+  <li>Replace: index-photographer.html</li>
+  <li>Replace: all .js files in assets/js apart from your custom Javascript files.</li>
+</ul>
 
-<p>To remove AppStrap styling and use default Slider Revolution styles simply remove the <code>data-page-class="slider-appstrap-theme"</code> attribute.</p>
-
-<h3 id="options">Options</h3>
-
-<p>All Slider Revolution options can be passed to the slider via HTML5 <code>data-settings='{}'</code> attribute placed on the slider element (<code>data-toggle="slider-rev"</code>).
-Example:</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"rev_slider fullscreenbanner"</span> <span class="na">data-toggle=</span><span class="s">"slider-rev"</span> <span class="na">data-settings=</span><span class="s">'{"startwidth":1100, "startheight":520, "delay":10000}'</span><span class="nt">&gt;</span></code></pre></figure>
-
-<p>See the <kbd>/theme/plugins/slider-revolution/</kbd> directory for examples &amp; documentation or visit <a href="http://themes.themepunch.com/?theme=revolution_jq">http://themes.themepunch.com/?theme=revolution_jq</a>.</p>
 
 					</article>
 				</section>
