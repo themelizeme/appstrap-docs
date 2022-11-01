@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "del": "^3.0.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-clean": "^0.3.2",
     "gulp-clean-dest": "^0.2.0",
     "gulp-delete-file": "^1.0.2",
