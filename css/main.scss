@@ -3,13 +3,16 @@ layout: null
 sitemap: false
 ---
 
+// Import Bootstrap functions and variables
+@import "../node_modules/bootstrap/scss/functions";
+
 $body-background-color: #fff;
 
 $content-max-width: 800px;
 $content-color: #222;
-$content-background-color: #fff;
+$content-background-color: #fff;  
 
-$brand-colour: #55A79A;
+$brand-colour: #b771b0;
 $brand-colour-light: mix($brand-colour, $content-background-color, 10%);
 
 $nav-header-background-color: $brand-colour;
@@ -21,6 +24,14 @@ $space: 20px;
 
 $mobile-break: 700px;
 $full-width-break: $nav-width + ($space * 4) + $content-max-width;
+
+$primary: $brand-colour;
+
+$enable-negative-margins: true;
+
+@import "../node_modules/bootstrap/scss/variables";
+
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 @import "mixins";
 @import "pygments";

@@ -1,52 +1,86 @@
-/*
- Output jekyll site to /dist directory
-*/
-
-// node modules required
 const gulp = require('gulp');
-const jekyll = require('gulp-jekyll-stream');
-const gutil = require('gulp-util');
 const zip = require('gulp-zip');
 const del = require('del');
-const deletefile = require('gulp-delete-file');
+const { exec } = require('child_process');
+const browserSync = require('browser-sync').create();  // Import BrowserSync
 
-const paths = {};
-paths.src = process.cwd();
-paths.dist = 'docs-dist';
-
-
-gulp.task('docs-build', function() {
-  const options = {
-    bundleExec: true,
-    config: '_config.yml,_config_build.yml'
-  };
-  
-  del(paths.dist);
-  
-  // Run Jekyll
-  return gulp.src(paths.src)
-    .pipe(jekyll(options))
-    .pipe(gulp.dest(paths.dist));    
-});
-
-gulp.task('docs-clean', ['docs-build'], function() {
-  return del([
-    paths.dist + '/*.xml',
-    paths.dist + '/*.txt',
-  ]);
-});
-
-gulp.task('docs-zip', ['docs-build', 'docs-clean'], function() {
-  gulp.src(paths.dist + '/*')
-    .pipe(zip(paths.dist + '.zip'))
-    .pipe(gulp.dest(paths.src))
-});
-
-// error handling
-var onError = function (error) {
-  console.log(error.message);
-  this.emit('end');
+const paths = {
+  dist: 'dist'
 };
 
-// gulp default task
-gulp.task('default', ['docs-build', 'docs-clean', 'docs-zip']);
+// Clean task to clear the dist folder
+gulp.task('clean', function() {
+  return del([paths.dist]).then(() => {
+    console.log('Dist folder cleaned.');
+  });
+});
+
+// Build task using Jekyll directly
+gulp.task('docs-build', gulp.series('clean', function(done) {
+  exec('bundle exec jekyll build --config _config.yml,_config_build.yml', function(err, stdout, stderr) {
+    console.log(stdout);
+    console.error(stderr);
+    done(err);
+  });
+}));
+
+// Zip task after building
+gulp.task('docs-zip', gulp.series('docs-build', function() {
+  console.log('Starting zip task...');
+  return gulp.src(paths.dist + '/**/*')
+    .pipe(zip(paths.dist + '.zip'))
+    .on('error', function(err) {
+      console.error('Zip error:', err.message);
+    })
+    .pipe(gulp.dest('.'))
+    .on('end', function() {
+      console.log('Zip task completed.');
+    });
+}));
+
+// Serve Jekyll and use Browsersync for live reloading
+gulp.task('serve', function(cb) {
+  // Start Jekyll server
+  const jekyll = exec('bundle exec jekyll serve --livereload', function(err, stdout, stderr) {
+    console.log(stdout);
+    console.error(stderr);
+    cb(err);
+  });
+
+  // Wait until Jekyll has fully started
+  jekyll.stdout.on('data', function(data) {
+    if (data.includes('Server running')) {
+      console.log('Jekyll is up, starting BrowserSync...');
+      
+      // Initialize BrowserSync
+      browserSync.init({
+        proxy: "http://127.0.0.1:4000",  // Proxy Jekyll's server
+        port: 3000,                      // Serve BrowserSync at port 3000
+        files: ["_site/**/*"]            // Watch Jekyll's output folder
+      });
+    }
+  });
+});
+
+// Watch task with BrowserSync reloading
+gulp.task('watch', function() {
+  gulp.watch(
+    ['_layouts/*.html', '_includes/*.html', '*.html', '*.md', '_config.yml', 'assets/css/*.scss', '_sass/**/*.scss'],
+    gulp.series('docs-build', function(done) {
+      browserSync.reload();
+      done();
+    })
+  );
+});
+
+// Combine watch and serve tasks
+gulp.task('watch-serve', gulp.parallel('watch', 'serve'));
+
+// Default task (runs clean, build, zip sequentially)
+gulp.task('default', gulp.series('docs-build', 'docs-zip'));
+
+// Error handling function
+function onError(error) {
+  console.log(error.message);
+  this.emit('end');
+}

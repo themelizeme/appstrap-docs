@@ -1,13 +1,25 @@
 {
   "dependencies": {
+    "bootstrap": "^5.3.3",
+    "browser-sync": "^3.0.2",
     "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-clean": "^0.3.2",
+    "gulp-clean": "^0.4.0",
     "gulp-clean-dest": "^0.2.0",
     "gulp-delete-file": "^1.0.2",
     "gulp-jekyll": "^0.0.0",
     "gulp-jekyll-stream": "^1.0.1",
     "gulp-util": "^3.0.8",
     "gulp-zip": "^4.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.0"
+  },
+  "scripts": {
+    "start": "bundle exec jekyll serve",
+    "build": "bundle exec jekyll build",
+    "clean": "gulp clean",
+    "zip": "gulp zip",
+    "watch": "gulp watch",
+    "watch-serve": "gulp watch-serve"
   }
 }

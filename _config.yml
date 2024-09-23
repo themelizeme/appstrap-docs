@@ -6,24 +6,28 @@ url: "https://github.com/thomjjames/appstrap-docs"
 baseurl:
 google_analytics_key:
 show_full_navigation: true
-doc_version: 1.0
+doc_version: 2.0
+future: true
 
+sass:
+  sass_dir: _sass
+  style: compressed
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
-logo: /siteicon.png
-description: AppStrap Bootstrap 4 Theme Documentation
+logo: /favicons/android-chrome-144x144.png
+description: AppStrap Bootstrap 5 Theme Documentation
 author:
   name: Themelize.me
   email: info@themelize.me
   twitter: # twitter username without the @ symbol
 social:
-  name:  AppStrap Bootstrap 4 Theme Docs
+  name:  AppStrap Bootstrap 5 Theme Docs
   links:
     - https://github.com/thomjjames/appstrap-docs
 
 bootstrap:
-  css: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css
-  js: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js
+  css: https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css #not used
+  js: https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js
   
 
 # -----
@@ -32,7 +36,7 @@ encoding: utf-8
 
 exclude: ["Gemfile", "Gemfile.lock", "dist", "node_modules", "about", "gulpfile.js", "package.json", "yarn-error.log", "yarn.lock", "vendor"]
 
-permalink: pretty
+permalink: /:title/
 
 plugins:
   - jekyll-sitemap
@@ -78,15 +82,16 @@ defaults:
 # Custom
 
 _theme:
-  name: AppStrap Bootstrap 4 Theme
+  name: AppStrap Bootstrap 5 Theme
   short_name: AppStrap
-  description: AppStrap is a fully responsive business or app bundle containing a massive 147 templates built with **Bootstrap 4.5** using the latest HTML5 & CSS3 techniques. Full flexbox support, modular structure (reuse blocks & widgets on any page), Sass & gulp integration (customise to suite your needs), one pagers, homepage variations, Shop UI & more!
-  version: 3.4
+  description: AppStrap is a fully responsive **HTML template** containing a massive 147 templates built with **Bootstrap 5** using the latest HTML5 & CSS3 techniques. Full flexbox support, modular structure (reuse blocks & widgets on any page), Sass & gulp integration (customise to suite your needs), one pagers, homepage variations, Shop UI & more!
+  description_long: AppStrap 4.x along with the Bootstrap 5 upgrade underwent some big transformations in the Gulp engine and build process so you can now be multiple limited projects within the theme and control much of the project from 1 simple config file.
+  version: 4.0
   buy_link: "https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme"
   preview_link: "https://wrapbootstrap.com/preview/WB0C6D0H4?ref=tme"
-  bootstrap_version: "4.5"
+  bootstrap_version: "5.3"
   created: Jan 2013
-  updated: June 3rd 2020
+  updated: August 31 2024
   demo_path: http://demos.themelize.me/appstrap3.4/theme/
   pages:
     - intro.html: Welcome To AppStrap

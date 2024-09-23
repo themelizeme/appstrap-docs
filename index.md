@@ -11,6 +11,6 @@ Welcome to the **{{site._theme.name}}** documentation subsite. Here you'll find 
 
 {{site._theme.description}}
 
-
+{{site._theme.description_long}}
 
 > **Don't have {{site._theme.name}}? [Buy it out]({{site._theme.buy_link}})**.

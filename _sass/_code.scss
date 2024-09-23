@@ -1,4 +1,4 @@
-pre, code, tt {
+pre, tt {
 	font-family: Inconsolata, Consolas, Courier, "Courier New", "Liberation Mono", monospace;
 	font-size: 0.85em;
 	white-space: pre-wrap;
@@ -30,8 +30,7 @@ pre {
 }
 
 blockquote > code,
-li > code,
-p > code {
+li > code {
 	padding: 4px 6px;
 	white-space: nowrap;
 }
