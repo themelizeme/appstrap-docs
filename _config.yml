@@ -36,7 +36,7 @@ encoding: utf-8
 
 exclude: ["Gemfile", "Gemfile.lock", "dist", "node_modules", "about", "gulpfile.js", "package.json", "yarn-error.log", "yarn.lock", "vendor"]
 
-permalink: /:title/
+permalink: /:title.html
 
 plugins:
   - jekyll-sitemap
@@ -47,7 +47,7 @@ plugins:
 collections:
   docs:
     title: Documentation
-    permalink: /:categories/:title/
+    permalink: /:categories/:title.html
     output: true
 
 defaults:

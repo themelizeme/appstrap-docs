@@ -1,6 +1,7 @@
 ---
 title: Editing Files (HTML, Scss, Javascript and Assets)
 category: Get Started
+permalink: /get-started/:title.html
 order: 3
 ---
 

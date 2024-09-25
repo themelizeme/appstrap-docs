@@ -22,7 +22,7 @@ The theme offers 11 additional colour schemes (15 in total including the default
 
 You can test the colour schemes per page using the style switcher in the bottom left corner:
 
-
+<img src="/images/screenshots/style-switcher.png" alt="{{ site.title }} style switcher" />
 
 ### Changing The Theme Primary Colour
 
