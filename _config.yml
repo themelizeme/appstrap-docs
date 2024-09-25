@@ -90,13 +90,13 @@ _theme:
   short_name: AppStrap
   description: AppStrap is a fully responsive **HTML template** containing a massive 147 templates built with **Bootstrap 5** using the latest HTML5 & CSS3 techniques. Full flexbox support, modular structure (reuse blocks & widgets on any page), Sass & gulp integration (customise to suite your needs), one pagers, homepage variations, Shop UI & more!
   description_long: AppStrap 4.x along with the Bootstrap 5 upgrade underwent some big transformations in the Gulp engine and build process so you can now be multiple limited projects within the theme and control much of the project from 1 simple config file.
-  version: 4.0
+  version: 4.0.0
   buy_link: "https://wrapbootstrap.com/theme/appstrap-responsive-website-template-WB0C6D0H4?ref=tme"
   preview_link: "https://wrapbootstrap.com/preview/WB0C6D0H4?ref=tme"
-  bootstrap_version: "5.3"
+  bootstrap_version: "5.3.3"
   created: Jan 2013
-  updated: August 31 2024
-  demo_path: http://demos.themelize.me/appstrap3.4/theme/
+  updated: Sept 25 2024
+  demo_path: http://demos.themelize.me/appstrap-4.0.0/
   pages:
     - intro.html: Welcome To AppStrap
     - index.html: Homepage (default)
