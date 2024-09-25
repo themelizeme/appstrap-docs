@@ -11,7 +11,3 @@ collections:
     permalink: /:title.html
     output: true
 
-sass:
-  load_paths:
-    - _sass
-    - node_modules/bootstrap/scss

@@ -12,6 +12,10 @@ future: true
 sass:
   sass_dir: _sass
   style: compressed
+  load_paths:
+    - node_modules
+    - _sass
+
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /favicons/android-chrome-144x144.png

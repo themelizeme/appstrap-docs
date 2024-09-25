@@ -4,7 +4,7 @@ sitemap: false
 ---
 
 // Import Bootstrap functions and variables
-@import "node_modules/bootstrap/scss/functions";
+@import "bootstrap/scss/functions";
 
 $body-background-color: #fff;
 
@@ -29,9 +29,9 @@ $primary: $brand-colour;
 
 $enable-negative-margins: true;
 
-@import "node_modules/bootstrap/scss/variables";
+@import "bootstrap/scss/variables";
 
-@import "node_modules/bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
 
 @import "mixins";
 @import "pygments";
