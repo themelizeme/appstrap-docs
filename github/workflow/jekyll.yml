@@ -1,35 +1,36 @@
-name: Jekyll Build
+name: Jekyll Build and Deploy
 
 on:
   push:
     branches:
-      - main  # Or your default branch
+      - master  # or your default branch
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout repository
       uses: actions/checkout@v2
 
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 3.0  # Match your Ruby version
+        ruby-version: 3.0  # Ensure this matches your `.ruby-version` file or Gemfile
 
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '16'
+        node-version: '16'  # Ensure this matches your local Node.js version
 
-    - name: Install Jekyll dependencies
+    - name: Install dependencies
       run: |
-        bundle install
-        yarn install
+        bundle install  # Install Ruby gems
+        yarn install     # Install Node.js dependencies
 
     - name: Build Jekyll site
-      run: bundle exec jekyll build
+      run: |
+        bundle exec jekyll build --trace
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
