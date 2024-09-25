@@ -1,28 +1,32 @@
-name: Jekyll site build
+name: Jekyll Build
 
 on:
   push:
     branches:
-      - master  # or the branch you want to deploy from
-  pull_request:
+      - main  # Or your default branch
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v2
 
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.0' # Or the version specified in your Gemfile
+        ruby-version: 3.0  # Match your Ruby version
 
-    - name: Install dependencies
-      run: bundle install
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
 
-    - name: Install npm dependencies
-      run: yarn install
+    - name: Install Jekyll dependencies
+      run: |
+        bundle install
+        yarn install
 
     - name: Build Jekyll site
       run: bundle exec jekyll build
