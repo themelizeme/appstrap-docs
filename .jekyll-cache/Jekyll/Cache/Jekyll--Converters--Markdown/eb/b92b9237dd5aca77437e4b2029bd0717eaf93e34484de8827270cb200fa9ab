@@ -1,0 +1,230 @@
+I"�M<p>With AppStrap Docs’s new Twig Template Engine helping compile HTML with Gulp you can easily add new content to your main nvarbar without having to directly edit the header.html partial at all. This is done using Twig blocks which are defined regions in a partial which can accept HTML content from the parent page, is no content is defined default content can be shown (as with the main menu) or it can remain blank (as with the navbarSecondaryContent block).</p>
+
+<p>Here’s how <code class="language-plaintext highlighter-rouge">@partials/header.html</code> looks:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% if headerSticky %}<span class="nt">&lt;div</span> <span class="na">data-bs-toggle=</span><span class="s">"sticky"</span><span class="nt">&gt;</span>{% endif %}
+
+  {% if headerSearch %}
+    <span class="c">&lt;!--Header search region - hidden by default --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"header-search collapse"</span> <span class="na">id=</span><span class="s">"search"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"search-form container-fluid {{ 'flex align-items-center'|classMerge(navbarContainer) }}"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">class=</span><span class="s">"form-control search"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Search <span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"bi-search fs-3"</span><span class="nt">&gt;&lt;/i&gt;&lt;/button&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-link close-btn"</span> <span class="na">data-bs-toggle=</span><span class="s">"search-form-close"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Close <span class="nt">&lt;/span&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-times search-icon"</span><span class="nt">&gt;&lt;/i&gt;&lt;/button&gt;</span>
+      <span class="nt">&lt;/form&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  {% endif %}
+
+  <span class="c">&lt;!--Header &amp; Branding region--&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"navbar-header"</span> <span class="na">class=</span><span class="s">"navbar {{ 'navbar'|classMerge(navbarToggleableClass, navbarClass) }}"</span><span class="nt">&gt;</span>
+    {% if navbarContainerClass %}<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"{{ navbarContainerClass }}"</span><span class="nt">&gt;</span>{% endif %}
+      {% if block('navbarBrandContent') is defined or siteLogo or siteName or siteSlogan %}
+        <span class="c">&lt;!--branding/logo --&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"{{ 'hstack gap-3'|classMerge(navbarBrandWrapperClass) }}"</span><span class="nt">&gt;</span>
+          {% if block('navbarBrandContent') is defined %}
+            <span class="c">&lt;!-- 
+              Utility area to place additional brand area content within the header. Use .order- classes to order this in the header.
+              By default this is empty.
+              Override in parent pages like this, @see ./src/html/admin.html for an example:
+              {#
+                {% embed "@partials/header.html" %}
+                  {% block navbarBrandContent %}&lt;a class="btn btn-primary d-none d-lg-block order-4" href="#"&gt;Contact Us&lt;/a&gt;{% endblock %}
+                {% endembed %} 
+              #}
+            --&gt;</span>
+            {% block navbarBrandContent %}{% endblock %}
+          {% endif %}
+
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"{{ 'navbar-brand me-0 fw-bolder'|classMerge(navbarBrandClass) }}"</span> <span class="na">href=</span><span class="s">"{{ navbarBrandUrl }}"</span> <span class="na">title=</span><span class="s">"Home"</span><span class="nt">&gt;</span>
+            {% if siteLogo and siteLogo.src %}
+              <span class="c">&lt;!-- siteLogo --&gt;</span>
+              <span class="nt">&lt;img</span> 
+                <span class="na">src=</span><span class="s">"{{ siteLogo.src }}"</span> 
+                <span class="na">alt=</span><span class="s">"{% if siteLogo.width %}{{ siteLogo.alt }}{% else %}Site logo{% endif %}"</span> 
+                <span class="err">{%</span> <span class="na">if</span> <span class="na">siteLogo.width</span> <span class="err">%}</span><span class="na">width=</span><span class="s">"{{ siteLogo.width }}"</span><span class="err">{%</span> <span class="na">endif</span> <span class="err">%}</span>
+                <span class="err">{%</span> <span class="na">if</span> <span class="na">siteLogo.height</span> <span class="err">%}</span><span class="na">height=</span><span class="s">"{{ siteLogo.height }}"</span><span class="err">{%</span> <span class="na">endif</span> <span class="err">%}</span>
+                <span class="err">{%</span> <span class="na">if</span> <span class="na">siteLogo.class</span> <span class="err">%}</span><span class="na">class=</span><span class="s">"{{ siteLogo.class }}"</span><span class="err">{%</span> <span class="na">endif</span> <span class="err">%}</span>
+              <span class="nt">/&gt;</span>
+            {% endif %}
+
+            {% if siteNameHidden %}
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>{{ siteName }}<span class="nt">&lt;/span&gt;</span>
+            {% else %}
+            {{ siteName }}
+            {% endif %}
+          <span class="nt">&lt;/a&gt;</span>
+
+          {% if siteSlogan %}
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"{{ 'vr'|classMerge(navbarVrClass) }}"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"{{ 'navbar-text'|classMerge(siteSloganClass) }}"</span><span class="nt">&gt;</span>{{ siteSlogan }}<span class="nt">&lt;/div&gt;</span>
+          {% endif %}
+        <span class="nt">&lt;/div&gt;</span>
+      {% endif %}
+
+      {% if block('navbarSecondaryContent') is defined or headerSearch or headerNavbarToggle or headerShoppingCart %}
+      <span class="c">&lt;!-- other header content --&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"{{ 'hstack gap-3'|classMerge(navbarSecondaryClass) }}"</span><span class="nt">&gt;</span>
+        {% if block('navbarSecondaryContent') is defined %}
+          <span class="c">&lt;!-- 
+            Utility area to place additional content within the header. Use .order- classes to order this in the header.
+            By default this is empty.
+            Override in parent pages like this, @see ./src/html/header-navbar-below.html for an example:
+            {#
+              {% embed "@partials/header.html" %}
+                {% block navbarSecondaryContent %}&lt;a class="btn btn-primary d-none d-lg-block order-4" href="#"&gt;Contact Us&lt;/a&gt;{% endblock %}
+              {% endembed %} 
+            #}
+          --&gt;</span>
+          {% block navbarSecondaryContent %}{% endblock %}
+        {% endif %}
+        
+        {% if not headerNavbarNavVrHide %}
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"{{ 'vr'|classMerge(navbarVrClass) }}"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        {% endif %}
+        
+        {% if headerSearch or headerNavbarToggle or headerOffcanvas %}
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navbar-nav flex-row gap-1 gap-lg-2 align-items-center"</span><span class="nt">&gt;</span>
+            {% if headerSearch %}
+            <span class="c">&lt;!-- Search Trigger --&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#search"</span> <span class="na">class=</span><span class="s">"{{ 'nav-link'|classMerge(searchBtnClass) }}"</span> <span class="na">data-bs-toggle=</span><span class="s">"search-form"</span> <span class="na">data-bs-target=</span><span class="s">".header-search"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"bi-search"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+            {% endif %}
+
+            {% if headerNavbarToggle %}
+              <span class="c">&lt;!-- Mobile collapse menu button --&gt;</span>
+              <span class="nt">&lt;a</span> 
+                <span class="na">href=</span><span class="s">"#"</span>
+                <span class="na">class=</span><span class="s">"{{ 'nav-link'|classMerge(mobileMenuBtnClass,navbarToggleClass) }}"</span> 
+                <span class="na">data-bs-toggle=</span><span class="s">"{{ mobileMenuType }}"</span> 
+                <span class="na">data-bs-target=</span><span class="s">"{{ mobileMenuTarget }}"</span> 
+                <span class="err">{{</span> <span class="na">navbarToggleAttr</span><span class="err">|</span><span class="na">raw</span> <span class="err">}}</span><span class="nt">&gt;</span>
+                {{ mobileMenuBtnText }}<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"bi-list{% if mobileMenuBtnText %} ps-1{% endif %}"</span><span class="nt">&gt;&lt;/i&gt;</span>
+              <span class="nt">&lt;/a&gt;</span>
+            {% endif %}
+
+            {% if headerOffcanvas %}
+            <span class="c">&lt;!-- Header Offcanvas --&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">title=</span><span class="s">"Click me you'll get a surprise"</span> <span class="na">class=</span><span class="s">"{{ 'nav-link order-5'|classMerge(searchBtnClass) }}"</span> <span class="na">data-bs-toggle=</span><span class="s">"offcanvas"</span> <span class="na">data-bs-target=</span><span class="s">"#offcanvas-sidebar"</span> <span class="na">aria-controls=</span><span class="s">"offcanvas-sidebar"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"bi bi-three-dots-vertical"</span><span class="nt">&gt;&lt;/i&gt;</span>
+              <span class="nt">&lt;/a&gt;</span>
+            {% endif %}
+
+            {% if headerOffcanvasCart %}
+              <span class="c">&lt;!-- Offcanvas Shop cart  --&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span>
+                <span class="na">class=</span><span class="s">"lh-1 float-end order-5 position-relative fs-5 op-hover-7 nav-link mx-2 p-1"</span>
+                <span class="na">data-bs-toggle=</span><span class="s">"offcanvas"</span> 
+                <span class="na">data-bs-target=</span><span class="s">"#shop-cart-sidebar"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"bi-cart-fill"</span><span class="nt">&gt;&lt;/i&gt;</span>
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Cart items: 3<span class="nt">&lt;/span&gt;</span>
+                  <span class="nt">&lt;span</span>
+                      <span class="na">class=</span><span class="s">"position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary text-white border-white lh-1"</span>
+                      <span class="na">style=</span><span class="s">"--bs-badge-font-size: 10px;"</span><span class="nt">&gt;</span>
+                      3
+                  <span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/a&gt;</span>
+            {% endif %}
+          <span class="nt">&lt;/div&gt;</span>
+        {% endif %}
+      <span class="nt">&lt;/div&gt;</span>
+      {% endif %}
+
+      {% block headerNavbarNav %}
+        <span class="c">&lt;!-- 
+          Default main menu/navbar 
+          Override this or hide it like this, @see ./src/html/header-collapse-menu.html for an example:
+          {#
+            {% embed "@partials/header.html" %}
+              {% block headerNavbarNav %}EMPTY or your main menu HTML {% endblock %}
+            {% endembed %} 
+          #}
+        --&gt;</span>
+        {% include '@partials/main-nav.html' %}
+
+      {% endblock %}
+    {% if navbarContainerClass %}<span class="nt">&lt;/div&gt;</span>{% endif %}
+  <span class="nt">&lt;/div&gt;</span>
+
+
+  {% if headerNavbarBelow or block('headerNavbarBelow') is defined %}
+    <span class="c">&lt;!-- 
+      Utility area below header navBar 
+      Override in parent pages like this, @see ./src/html/header-collapse-menu.html for an example:
+      {#
+        {% embed "@partials/header.html" %}
+          {% block headerNavbarBelow %}Your headerNavbarBelow HTML content which will be automatically passed to this region in the header{% endblock %}
+        {% endembed %} 
+      #}
+    --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"{{ 'navbar navbar-below'|classMerge(navbarBelowToggleableClass, navbarBelowClass) }}"</span><span class="nt">&gt;</span>
+      {% if navbarBelowContainerClass %}<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"{{ navbarBelowContainerClass }}"</span><span class="nt">&gt;</span>{% endif %}
+        {% block headerNavbarBelow %}{% endblock %}
+      {% if navbarBelowContainerClass %}<span class="nt">&lt;/div&gt;</span>{% endif %}
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  {% endif %}
+
+
+{% if headerSticky %}<span class="nt">&lt;/div&gt;</span>{% endif %}</code></pre></figure>
+
+<p>It contains 4 block regions which can be added to from the parent page:</p>
+
+<h3 id="navbarbrandcontent"><code class="language-plaintext highlighter-rouge">navbarBrandContent</code></h3>
+
+<p>This renders before the navbar brand and can be ordered with the <code class="language-plaintext highlighter-rouge">order-*</code> classes.</p>
+
+<p>Example: Add a button to the left of the brand, like in our admin UI</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% embed '@partials/header.html' %}
+  {% block navbarBrandContent %}
+    <span class="c">&lt;!-- Toggle the #navbar-side-primary navbar-side element --&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"navbar-text fs-5 align-self-stretch border-end navbar-border navbar-side-toggler bg-gray-300 bg-op-1 bg-op-hover-2 rounded-0 transition waves-btn order-first"</span> <span class="na">data-bs-toggle=</span><span class="s">"navbar-offcanvas"</span> <span class="na">data-bs-target=</span><span class="s">"#navbar-side-primary"</span><span class="nt">&gt;</span> <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"bi-list icon-1x"</span><span class="nt">&gt;&lt;/i&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden-focusable"</span><span class="nt">&gt;</span>Main Menu Panel<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;/a&gt;</span>
+  {% endblock %}
+{% endembed %}</code></pre></figure>
+
+<h3 id="navbarsecondarycontent"><code class="language-plaintext highlighter-rouge">navbarSecondaryContent</code></h3>
+
+<p>This renders before the main navbar and can be ordered with the <code class="language-plaintext highlighter-rouge">order-*</code> classes.</p>
+
+<p>Example: Add a button to the right of the header</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% embed '@partials/header.html' %}
+  {% block navbarSecondaryContent %}
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#pricing"</span> <span class="na">data-bs-toggle=</span><span class="s">"scroll-link"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm d-none d-lg-block fw-bold px-lg-3 py-lg-2 ms-lg-3"</span><span class="nt">&gt;</span>Register<span class="nt">&lt;/a&gt;</span>
+  {% endblock %}
+{% endembed %}</code></pre></figure>
+
+<h3 id="headernavbarnav"><code class="language-plaintext highlighter-rouge">headerNavbarNav</code></h3>
+
+<p>This is the main navabr in the header, if nothing is defined in the parent page it includes <code class="language-plaintext highlighter-rouge">@partials/main-nav.html</code></p>
+
+<p>Example: Render no main navbar, simply pass an empty block.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% embed "@partials/header.html" %} 
+  {% block headerNavbarNav %} {% endblock %} 
+{% endembed %} </code></pre></figure>
+
+<h3 id="headernavbarbelow"><code class="language-plaintext highlighter-rouge">headerNavbarBelow</code></h3>
+
+<p>This renders below the header but within the sticky wrapper, used if for example you want to show a navbar below the header rather than in the header</p>
+
+<p>Example: Render a navbar below the header instead</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% embed "@partials/header.html" %}
+  {% block headerNavbarBelow %}
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex align-items-center justify-content-between w-100"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hstack gap-4"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h6</span> <span class="na">class=</span><span class="s">"fs-6 my-0 mb-1 text-muted d-flex align-items-center"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"bi-truck me-2"</span><span class="nt">&gt;&lt;/i&gt;</span> Free Worldwide Shipping
+      <span class="nt">&lt;/h6&gt;</span>
+      <span class="nt">&lt;h6</span> <span class="na">class=</span><span class="s">"fs-6 my-0 text-muted fw-normal d-flex align-items-center"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"bi-telephone me-2"</span><span class="nt">&gt;&lt;/i&gt;</span> (+44) 7283643345
+      <span class="nt">&lt;/h6&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!-- Button aligned right on lg screens, centered on smaller screens --&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm w-50 w-lg-auto text-uppercase fw-bold px-3 mt-3 mt-lg-0 ms-auto"</span><span class="nt">&gt;</span> Sale Now On! <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  {% endblock %}
+{% endembed %}</code></pre></figure>
+
+<p>For global changes you can alter the <code class="language-plaintext highlighter-rouge">@partials/header.html</code> file in your project or clone it and include it in your own pages.</p>
+:ET

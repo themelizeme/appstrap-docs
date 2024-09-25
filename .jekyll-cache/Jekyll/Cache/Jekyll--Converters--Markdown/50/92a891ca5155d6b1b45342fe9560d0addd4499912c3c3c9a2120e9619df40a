@@ -1,0 +1,59 @@
+I"<p>This release updates to Bootstrap v4.0.0-beta.2, for official release notes and ship list see:  https://github.com/twbs/bootstrap/issues/23278</p>
+
+<h3 id="replace-the-following-files">Replace the following files:</h3>
+
+<ul>
+  <li>Replace: assets/js/scripts.js and assets/js/scripts.min.js</li>
+  <li>Replace: .navbar-toggleable-* classes with the new .navbar-expand-* classes</li>
+  <li>Replace: index-event.html</li>
+  <li>Replace: All index-onepager html files</li>
+  <li>Replace: data-toggle=”unveil” with data-toggle=”blazy”</li>
+  <li>Replace: index-jobs.html</li>
+  <li>Replace: index-freealancer-portfolio.html carousel code</li>
+  <li>Replace: Backup /assets/scss/custom then overwrite /assets/scss/ with new files, then add your /assets/scss/custom directory back, run gulp</li>
+  <li>Replace: .header-transparent now has no default sticky styles, use the new .sticky-header-light, .sticky-header-dark, .sticky-header-primary classes to control the .header</li>
+  <li>Removed: .header-translucent has been removed in favour of using .bg-* classes  and .bg-op-(1-9) classes for more flexibility</li>
+  <li>Replace: The following colour classes have been replaced:
+    <ul>
+      <li>.bg-inverse (use .bg-dark)</li>
+      <li>.bg-faded (use .bg-light)</li>
+      <li>.text-inverse (use .text-dark)</li>
+      <li>.border-faded (use .border-light)</li>
+      <li>.divider-faded (use .divider-light)</li>
+      <li>.hr-faded (use .hr-light)</li>
+      <li>.navbar-inverse (use .navbar-dark)</li>
+      <li>.btn-inverse (use .btn-dark)</li>
+    </ul>
+  </li>
+  <li>Replace: Sass variable changes:
+    <ul>
+      <li>All colours have been added to a sass map called $as-theme-colours and $as-theme-colours-extended (with social brands)</li>
+      <li>$extended-colour-options has been renamed to $as-theme-colours-extended-options and set to false as default.</li>
+      <li>$theme-colours has been renamed to $as-theme-colours-default</li>
+      <li>$theme-brand has been renamed to $as-theme-colours-brands</li>
+      <li>$social_brands has been renamed to $as-theme-colours-social-brands</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="changes">Changes:</h3>
+
+<ul>
+  <li>NEW: New magazine homepage variation with new header on sticky functionality and inline overlay search form</li>
+  <li>NEW: Control scroll link speed by passing data-scroll-link-speed on any data-toggle=”scroll-link” link</li>
+  <li>NEW: Added animated modals with animate.css (elements-modals.html)</li>
+  <li>NEW: Responsive overlay menu header example (header-overlay-menu-responsive.html)</li>
+  <li>NEW: Social media branding colours and utilities page (elements-social-media.html)</li>
+  <li>NEW: Amazing header control with new sticky classes, restyle your header on sticky for the ultimate flexibility</li>
+  <li>NEW: .nav-link-dd-effect main nav link class to make nav links act link dropdown links on hover</li>
+  <li>UPDATED: Bootstrap beta 2 update (see: https://github.com/twbs/bootstrap/issues/23278)</li>
+  <li>UPDATED: added new position classes .pos-BREAKPOINT-(y,x,a) for y axis, x axis and all sides and pos-BREAKPOINT-SIDE-auto for auto positioning</li>
+  <li>UPDATED: Migrated from unveil to blazy for image lazy loading. Lazy load anything with an src!</li>
+  <li>BUGFIX: Fixed markup issue on index-event.html</li>
+  <li>BUGFIX: jobs sidebar sticky fix on small screens and header scroll issue fix</li>
+  <li>BUGFIX: Tabs active background transparent fix</li>
+  <li>BUGFIX: scroll menu active state on one pagers fix</li>
+  <li>BUGFIX: IE11 carousel fix on index-freealancer-portfolio.html</li>
+</ul>
+
+:ET

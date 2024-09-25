@@ -1,0 +1,16 @@
+I"„<h3 id="replace-the-following-filessnippets">Replace the following files/snippets:</h3>
+
+<ul>
+  <li>Replace: assets/css/* files</li>
+  <li>Replace: theme/gulpfile.js</li>
+  <li>Replace: assets/scss/*</li>
+</ul>
+
+<h3 id="changes">Changes:</h3>
+
+<ul>
+  <li>BUGFIX: Font Awesome missing icons fix</li>
+  <li>BUGFIX: Gulp plugins path fix</li>
+  <li>BUGFIX: Accordion collapse fix</li>
+</ul>
+:ET

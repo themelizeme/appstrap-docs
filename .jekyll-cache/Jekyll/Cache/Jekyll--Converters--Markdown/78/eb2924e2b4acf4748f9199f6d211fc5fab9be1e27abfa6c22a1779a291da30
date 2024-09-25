@@ -1,0 +1,154 @@
+I"2<p>Examples and How To’s on AppStrap Docs Customisation.</p>
+
+<blockquote>
+  <p>More in-depth how tos and examples will soon be added to <a href="https://themelize.me" target="_blank">Themelize.me</a>.</p>
+</blockquote>
+
+<div class="examples">
+  <div class="list-group list-group-flush">
+    
+
+    
+      
+    
+      
+        
+        
+          <a href="/examples/adding-google-fonts.html" class="list-group-item list-group-item-action d-flex align-items-start gap-3 ">
+            
+            <div>
+              <div class="fw-bold d-block">
+                Adding Google fonts
+              </div>
+              
+                <div class="opacity-75">Find out how to quickly and easily add Google fonts to your projects.</div>
+              
+            </div>
+          </a>
+      
+          <a href="/examples/adding-main-navbar-content.html" class="list-group-item list-group-item-action d-flex align-items-start gap-3 ">
+            
+            <div>
+              <div class="fw-bold d-block">
+                Adding Main Navbar Content With Twig Blocks
+              </div>
+              
+                <div class="opacity-75">Find out how to quickly and easily Main Navbar Content With Twig Blocks</div>
+              
+            </div>
+          </a>
+      
+          <a href="/examples/adding-new-pages.html" class="list-group-item list-group-item-action d-flex align-items-start gap-3 ">
+            
+            <div>
+              <div class="fw-bold d-block">
+                Adding New Pages
+              </div>
+              
+            </div>
+          </a>
+      
+          <a href="/examples/disable-plugin-autoloading.html" class="list-group-item list-group-item-action d-flex align-items-start gap-3 ">
+            
+            <div>
+              <div class="fw-bold d-block">
+                Disable autoloading for plugin assets
+              </div>
+              
+                <div class="opacity-75">Disable AppStrap's auto plugin loading if you're using a CMS or framework.</div>
+              
+            </div>
+          </a>
+      
+          <a href="/examples/dropdowns-hover.html" class="list-group-item list-group-item-action d-flex align-items-start gap-3 ">
+            
+            <div>
+              <div class="fw-bold d-block">
+                Dropdowns On Hover
+              </div>
+              
+                <div class="opacity-75">Control when dropdowns show on hover or on click.</div>
+              
+            </div>
+          </a>
+      
+          <a href="/examples/mobile-menu-options.html" class="list-group-item list-group-item-action d-flex align-items-start gap-3 ">
+            
+            <div>
+              <div class="fw-bold d-block">
+                Mobile Menu Options
+              </div>
+              
+                <div class="opacity-75">Choose between collapse menus and offcanvas menus as the main nabvar mobile display.</div>
+              
+            </div>
+          </a>
+      
+          <a href="/examples/override-colours.html" class="list-group-item list-group-item-action d-flex align-items-start gap-3 ">
+            
+            <div>
+              <div class="fw-bold d-block">
+                Overriding Primary Colours
+              </div>
+              
+                <div class="opacity-75">Find out how to change the theme primary colour or add a custom primary colour.</div>
+              
+            </div>
+          </a>
+      
+          <a href="/examples/pages-in-subfolders.html" class="list-group-item list-group-item-action d-flex align-items-start gap-3 ">
+            
+            <div>
+              <div class="fw-bold d-block">
+                Pages in subfolders
+              </div>
+              
+                <div class="opacity-75">Simple data attributes to change where AppStrap looks like plugin assets.</div>
+              
+            </div>
+          </a>
+      
+          <a href="/examples/slider-revolution.html" class="list-group-item list-group-item-action d-flex align-items-start gap-3 ">
+            
+            <div>
+              <div class="fw-bold d-block">
+                Slider Revolution Slider
+              </div>
+              
+            </div>
+          </a>
+      
+          <a href="/examples/sticky-header.html" class="list-group-item list-group-item-action d-flex align-items-start gap-3 ">
+            
+            <div>
+              <div class="fw-bold d-block">
+                Sticky Header
+              </div>
+              
+                <div class="opacity-75">See how to easily disable the sticky header on all or certain pages.</div>
+              
+            </div>
+          </a>
+      
+          <a href="/examples/unusedassets.html" class="list-group-item list-group-item-action d-flex align-items-start gap-3 ">
+            
+            <div>
+              <div class="fw-bold d-block">
+                Removing unused assets
+              </div>
+              
+                <div class="opacity-75">Find out how to remove unused assets from your production builds.</div>
+              
+            </div>
+          </a>
+      
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+:ET

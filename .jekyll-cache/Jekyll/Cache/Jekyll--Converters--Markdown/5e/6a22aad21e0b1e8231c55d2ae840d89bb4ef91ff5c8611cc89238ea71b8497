@@ -1,0 +1,8 @@
+I"¨<p>All pages within the theme are designed to be copy &amp; pasted to help you quickly get started with page building.</p>
+
+<p>When you use the <a href="/get-started/1-project-setup.html">create-project command</a> all .html files from the parent /src directory are automatically copied to your projects /src/html directory. From there you can delete, copy or edit any of the files independently from the parent theme or any other projects.</p>
+
+<blockquote>
+  <p>In a future release weâ€™ll be expanding the <code class="language-plaintext highlighter-rouge">create-project</code> command to allow you to copy specific files into your existing or new projects.</p>
+</blockquote>
+:ET

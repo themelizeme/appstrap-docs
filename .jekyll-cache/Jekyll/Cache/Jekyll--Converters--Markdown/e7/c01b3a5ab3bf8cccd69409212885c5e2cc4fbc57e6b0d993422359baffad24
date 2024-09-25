@@ -1,0 +1,37 @@
+I"v<p>The theme offers 11 additional colour schemes (15 in total including the default green):</p>
+
+<ul>
+  <li>Green: <code>#55A79A</code></li>
+  <li>Red: <code>#EF4444</code></li>
+  <li>Purple: <code>#b771b0</code></li>
+  <li>Orange: <code>#e67e22</code></li>
+  <li>Blue: <code>#0d6efd</code></li>
+  <li>Pink: <code>#c71c77</code></li>
+  <li>Brown: <code>#91633c</code></li>
+  <li>Slate: <code>#5D6D7E</code></li>
+  <li>Olive: <code>#808000</code></li>
+  <li>Teal: <code>#008080</code></li>
+  <li>Charcoal: <code>#34495e</code></li>
+</ul>
+
+<p>You can test the colour schemes per page using the style switcher in the bottom left corner:</p>
+
+<p><img src="/images/screenshots/style-switcher.png" alt="AppStrap Docs style switcher" /></p>
+
+<h3 id="changing-the-theme-primary-colour">Changing The Theme Primary Colour</h3>
+
+<p>The style switcher is just for testing but if you want to change permanently to one of the predefined colours or a custom colour you have the following options:</p>
+
+<h4 id="1-in-config">1) In Config</h4>
+
+<p>The simplest option is to use your <code class="language-plaintext highlighter-rouge">config.PROJECT.js</code> file and set the setting <code class="language-plaintext highlighter-rouge">colourScheme: 'COLOUR',</code> with COLOUR being one of the colours listed above ie. <code class="language-plaintext highlighter-rouge">colourScheme: 'purple',</code>. 
+This option alters the themes CSS variables to switch the colour.</p>
+
+<hr class="hr-mini" />
+
+<h4 id="2-in-sass">2) In SASS</h4>
+
+<p>Only slightly more complex, you can change the theme colour to any colour even outside the predefined colours by using your <code class="language-plaintext highlighter-rouge">/src/scss/_variables.custom.scss</code> file and setting <code class="language-plaintext highlighter-rouge">$primary: HEX_COLOUR;</code> ie. <code class="language-plaintext highlighter-rouge">$primary: #343566;</code>.</p>
+
+<p>This will update the <code class="language-plaintext highlighter-rouge">$primary</code> variable throughout Bootstrap and AppStrap Docs and run all the colour functions again so is a more “complete” way of changing your primary colour.</p>
+:ET

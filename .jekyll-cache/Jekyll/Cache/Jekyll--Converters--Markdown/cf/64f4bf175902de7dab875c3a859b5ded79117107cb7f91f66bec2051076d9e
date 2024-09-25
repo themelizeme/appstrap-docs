@@ -1,0 +1,17 @@
+I"¥<p>Off canvas bugfix and Bootstrap 4.1.3 update.</p>
+
+<h3 id="replace-the-following-filessnippets">Replace the following files/snippets:</h3>
+
+<ul>
+  <li>Replace: assets/css/* files</li>
+  <li>Replace: reference to all Bootstrap 4.1.1 CSS and Javascript files in head &amp; footer.</li>
+</ul>
+
+<h3 id="changes">Changes:</h3>
+
+<ul>
+  <li>UPDATED: Update to Bootstrap 4.1.3</li>
+  <li>BUGFIX: Off canvas bugfix</li>
+</ul>
+
+:ET

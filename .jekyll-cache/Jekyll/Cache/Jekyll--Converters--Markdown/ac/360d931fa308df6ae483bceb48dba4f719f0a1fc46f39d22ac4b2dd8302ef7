@@ -1,0 +1,30 @@
+I"<p>Various bug fixes and new features.</p>
+
+<h3 id="replace-the-following-filessnippets">Replace the following files/snippets:</h3>
+
+<ul>
+  <li>Replace: assets/js/ directory</li>
+  <li>Replace: assets/css/* files</li>
+  <li>Replace: theme/gulpfile.js</li>
+  <li>Replace: assets/scss/*</li>
+</ul>
+
+<h3 id="changes">Changes:</h3>
+
+<ul>
+  <li>NEW: Church homepage, see index-church.html</li>
+  <li>NEW: Knowledgeable homepage, see index-knowledgeable.html</li>
+  <li>NEW: Select pickers page, see elements-select-pickers.html</li>
+  <li>NEW: Maintenance page, see page-maintenance.html</li>
+  <li>NEW: Site status page, see page-site-status.html</li>
+  <li>NEW: Page titles examples page (more coming soon), see page-titles.html</li>
+  <li>NEW: svg icon support on icon-Yx classes by adding .icon-svg class</li>
+  <li>NEW: Added new .rounded-(5, 10, 15, 20, 25, 30, 35, 40, 45, 50) border radius classes</li>
+  <li>NEW: Added new grey colour utils: bg-gray-(100-800) &amp; text-gray-(100-800)</li>
+  <li>NEW: Added new border responsive utils: .border-SIDE-BREAKPOINT &amp; .border-SIDE-0-BREAKPOINT</li>
+  <li>UPDATED: Renamed 404.html to page-404.html</li>
+  <li>BUGFIX: index-forum.html form control height</li>
+  <li>BUGFIX: Server off canvas plugin from fixed CDN URL</li>
+</ul>
+
+:ET

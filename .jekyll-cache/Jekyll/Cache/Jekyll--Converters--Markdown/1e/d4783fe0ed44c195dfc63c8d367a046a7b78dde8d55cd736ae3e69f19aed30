@@ -1,0 +1,17 @@
+I"ô<h3 id="changes">Changes:</h3>
+
+<ul>
+  <li>UPGRADED: Cube Portfolio to 4.4.0</li>
+  <li>FIXED: Grid layout bug in index-photographer.html</li>
+  <li>FIXED: Animated top link fixed</li>
+</ul>
+
+<h3 id="replace-the-following-filessnippets">Replace the following files/snippets:</h3>
+
+<ul>
+  <li>Replace: /assets/plugins/cubeportfolio-jquery-plugin/ directory</li>
+  <li>Replace: index-photographer.html</li>
+  <li>Replace: all .js files in assets/js apart from your custom Javascript files.</li>
+</ul>
+
+:ET

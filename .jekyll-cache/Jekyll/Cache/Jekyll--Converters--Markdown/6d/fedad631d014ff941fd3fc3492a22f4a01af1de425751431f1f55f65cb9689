@@ -1,0 +1,35 @@
+I"†<h3 id="replace-the-following-filessnippets">Replace the following files/snippets:</h3>
+
+<p>Replace on all pages:</p>
+
+<ol>
+  <li>Bootstrap CSS:</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Bootstrap v4.0.0-beta.2 CSS via CDN --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"</span><span class="nt">&gt;</span></code></pre></figure>
+
+<p>with</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Bootstrap v4.0.0-beta.3 CSS via CDN --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"</span><span class="nt">&gt;</span></code></pre></figure>
+
+<ol>
+  <li>Bootstrap Javascript:</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Bootstrap v4.0.0-beta.2 JS via CDN --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+
+<p>with</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Bootstrap v4.0.0-beta.3 JS via CDN --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+
+<h3 id="changes">Changes:</h3>
+
+<ul>
+  <li>UPDATED: To Bootstrap v4.0.0-beta.3, see <a href="https://github.com/twbs/bootstrap/issues/24439">https://github.com/twbs/bootstrap/issues/24439</a> and <a href="http://getbootstrap.com/docs/4.0/migration/#beta-3-changes">http://getbootstrap.com/docs/4.0/migration/#beta-3-changes</a></li>
+</ul>
+
+:ET

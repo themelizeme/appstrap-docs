@@ -1,0 +1,130 @@
+I"�)<h2 id="finding-your-source-files">Finding Your Source Files</h2>
+
+<p>With project based sites all your source files (HTML, Scss, Javascript and Assets) can be found at <code class="language-plaintext highlighter-rouge">./prjects/PROJECTNAME/src</code>.
+These files are copied from the parent /src directory when you run the <code class="language-plaintext highlighter-rouge">create-project</code> command and therefore you are free to edit and maintain them as you please.</p>
+
+<p>With non-project based sites you need to edit the <code class="language-plaintext highlighter-rouge">/src</code> files directly which makes upgrading very tricky so again our recommmended approach is using project based sites created with the gulp <code class="language-plaintext highlighter-rouge">create-project</code> command.</p>
+
+<p>With the power of gulp watch any changes made to your files are automatically loaded, gulp tasks are rerun and Browser Sync will update the changes in your browser.</p>
+
+<p>All <code class="language-plaintext highlighter-rouge">/src</code> files and processd by Gulp into the <code class="language-plaintext highlighter-rouge">/dist</code> directory by default.</p>
+
+<hr />
+
+<h2 id="html-files--twig">HTML Files + Twig</h2>
+
+<p>As of AppStrap Docs 4.x you can now use the powerful <a href="https://twig.symfony.com/" target="_blank">Twig template engine</a> to build your HTML files and then Gulp will process them into raw HTML in your <code class="language-plaintext highlighter-rouge">/dist</code> directory.</p>
+
+<p>Twig is a powerful and flexible templating engine that allows you to dynamically generate HTML pages based on variables, control structures, and reusable blocks. Here are a few key examples of how we use Twig in AppStrap Docs:</p>
+
+<h4 id="variables-and-conditional-logic">Variables and Conditional Logic:</h4>
+
+<p>Our config settings are automatically passed to Twig as variables which you can then use in your templates and use them to dynamically change content. For example, in the body tag:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;body</span> <span class="err">{%</span> <span class="na">if</span> <span class="na">bodyClass</span> <span class="err">%}</span> <span class="na">class=</span><span class="s">"{{bodyClass}}"</span> <span class="err">{%</span> <span class="na">endif</span> <span class="err">%}</span><span class="nt">&gt;</span></code></pre></figure>
+
+<p>Here, <code class="language-plaintext highlighter-rouge">bodyClass</code> is a variable passed from the page front matter. If it exists, Twig outputs the class attribute with the value of bodyClass. If the variable is not set, no class attribute is added.</p>
+
+<h4 id="includes">Includes:</h4>
+
+<p>Twig allows you to reuse code by including other templates. This helps keep your code clean and modular. For example:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% include '@partials/head.html' %}</code></pre></figure>
+
+<p>This line includes the content of <code class="language-plaintext highlighter-rouge">head.html</code> from the <code class="language-plaintext highlighter-rouge">/src/html/@partials</code> folder, allowing you to reuse the head section across multiple pages.</p>
+
+<!-- > New to Twig? Check out this great Twig crash course on uDemy! -->
+
+<h4 id="blocks-and-embeds">Blocks and Embeds:</h4>
+
+<p>Blocks and embeds are powerful features in Twig that enable inheritance and reusable content. Here, Twig uses embed to extend a partial template and add additional content:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% embed '@partials/header.html' %}
+  {% block navbarBrandContent %}
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"navbar-text fs-5 align-self-stretch"</span><span class="nt">&gt;</span>Contact Us<span class="nt">&lt;/a&gt;</span>
+  {% endblock %}
+{% endembed %}</code></pre></figure>
+
+<p>The embed tag imports <code class="language-plaintext highlighter-rouge">header.html</code> from <code class="language-plaintext highlighter-rouge">/src/html/@partials</code> and allows you to override or add content inside it using block. In this case, the navbarBrandContent block is overridden with custom content.</p>
+
+<blockquote>
+  <p>NOTE: Using Twig is totally optional, you can of course just write raw HTML in your /src/html/*.html files and it will work just fine too.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="sass-files">SASS Files</h2>
+
+<p>By default when you create a project Gulp will copy over the following files and then reference to the parent /src directory so you can use the AppStrap Docs core Scss files without needing to maintain them:</p>
+
+<p><code class="language-plaintext highlighter-rouge">/src/scss/_custom.maps.scss</code> - thia allows you to alter the utility maps set by Bootstrap and AppStrap Docs, see <a href="https://getbootstrap.com/docs/5.3/utilities/api/#using-the-api" target="_blank">https://getbootstrap.com/docs/5.3/utilities/api/#using-the-api</a> for more information.</p>
+
+<p><code class="language-plaintext highlighter-rouge">/src/scss/_custom.style.scss</code> - this file can house any custom SASS code you want to automatically add to AppStrap Docs and is loaded and the end of the SASS build so you can override anything needed.</p>
+
+<p><code class="language-plaintext highlighter-rouge">/src/scss/_custom.variables.scss</code> - this file allows you to alter variables set by Bootstrap and AppStrap Docs, see <a href="/customisation/1-override-colours/">overriding colours</a> as an example.</p>
+
+<p><code class="language-plaintext highlighter-rouge">/src/scss/theme.style.scss</code> - this is the parent SASS for AppStrap Docs, in most cases you won’t need to alter this but if you want to exclude any SASS partials and build more custom on a project this is where you’d do it.</p>
+
+<div class="hl-box">
+  <p><span class="badge text-white bg-primary hl-box-title">Config options</span> To override which SASS files are included in Gulp builds you can use the config <code>paths.src.scssFiles: []</code> &amp; <code>paths.src.scssFilesWatched: []</code> options and to output the compiled CSS to somewhere else you can use <code>paths.dist.cssDir</code> but this is only recommended for advanced users.</p>
+  
+  <p>If you prefer to just write plain CSS you can create static CSS files and include them in your pages with the <code>additionalCSS</code> config setting: </p>
+
+  
+<figure class="highlight"><pre><code class="language-html" data-lang="html">additionalCSS: [ // add additional CSS files to <span class="nt">&lt;head&gt;</span>
+  './projects/myproject/css/custom2.css'
+  './projects/myproject/css/custom2.css'
+],
+  </code></pre></figure>
+
+</div>
+
+<hr />
+
+<h2 id="javascript-files">Javascript Files</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">/assets/src/js/custom.script.js</code> allows you to override plugin functions within AppStrap Docs as well as add your own plugin definitions using AppStrap Docs to load in the theme assets.</p>
+
+<p>You can also use the AppStrap Docs Javascript API to react to javascript events in AppStrap Docs:</p>
+
+<ol>
+  <li><code>themePreload</code>: Before any AppStrap Docs Javascript has run</li>
+  <li><code>themePrePlugins</code>: Before any AppStrap Docs Javascript has run</li>
+  <li><code>themeLoaded</code>: After the theme has loaded everything</li>
+  <li><code>themePluginsExtras</code>: Add new plugin integrations or override existing ones.</li>
+</ol>
+
+<div class="hl-box">
+  <span class="badge text-white bg-primary hl-box-title">Config options</span>
+  
+  <p>You can alter the Javascript files compiled by AppStrap Docs using the <code>paths.src.JSSourceFiles</code> file glob. The order is important but you can for example exclude a given plugin using <code>'!./src/js/plugins/fakeLoader.js'</code> in the glob. Similarly with <code>paths.src.JSSourceFilesVendors</code> which compiles the vendor packages needed for AppStrap Docs.</p>
+
+  <p>When the config setting <code>includeCustomJS: true</code> is set <code>/dist/assets/js/custom.script.js</code> is automatically included in HTML files. You can also add additional Javascript files to your pages using <code>additionalJS</code> for example:</p>
+
+  
+<figure class="highlight"><pre><code class="language-html" data-lang="html">  additionalJS: [ // add additional JS files to footer
+    './projects/myproject/js/custom1.js',
+    './projects/myproject/js/custom2.js'
+  ],
+  </code></pre></figure>
+
+</div>
+
+<hr />
+
+<h2 id="assets">Assets</h2>
+
+<p>All files within <code class="language-plaintext highlighter-rouge">/src/assets</code> are automatically copied to <code class="language-plaintext highlighter-rouge">/dist/assets</code> by Gulp when you run <code class="language-plaintext highlighter-rouge">yarn gulp</code> or <code class="language-plaintext highlighter-rouge">yarn gulp build</code> OR whenever you edit or add new files.</p>
+
+<p>Gulp will also create a file called <code class="language-plaintext highlighter-rouge">assets-map.json</code> within <code class="language-plaintext highlighter-rouge">/dist/assets</code> which lists all the assets used per page so you can keep track of your file assets. In addition, when you run <code class="language-plaintext highlighter-rouge">yarn gulp build</code> the <code class="language-plaintext highlighter-rouge">assets-map.json</code> file used to remove any files from <code class="language-plaintext highlighter-rouge">/dist/assets</code> that are not currently in use within your HTML files.</p>
+
+<p><span class="badge text-white bg-primary">Config options</span> To disable the removal of unused assets you can set <code class="language-plaintext highlighter-rouge">buildSettings.unusedAssets: false</code> in your <code class="language-plaintext highlighter-rouge">config.PROJECT.js</code> file.</p>
+
+<p><code class="language-plaintext highlighter-rouge">yarn gulp build</code> will also compress your image files to make them as small as possible when copied to <code class="language-plaintext highlighter-rouge">/dist/assets</code>, this step can take awhile if you have a lot of images so it’s only run on the build command.</p>
+
+<p>To reference assets in your HTML simply use <code class="language-plaintext highlighter-rouge">/assets/img/FOLDER/FILE.EXTENSION</code>.</p>
+
+<h3 id="next-steps">Next Steps</h3>
+
+<p>Now you should have an overview of all the file assets you need to work with so you can follow our <a href="/examples/">how tos and examples section</a> for building more with AppStrap Docs</p>
+:ET

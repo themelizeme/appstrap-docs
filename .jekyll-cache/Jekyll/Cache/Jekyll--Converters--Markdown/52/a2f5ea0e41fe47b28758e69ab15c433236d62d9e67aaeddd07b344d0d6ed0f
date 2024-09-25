@@ -1,0 +1,3 @@
+I"<p>If you want to put your pages into subfolders you will need to alter the path to the plugins so the script.js file can find them correctly.
+To do this (since AppStrap version 3.0.5) you can simply add the following to the body tag for all pages that are within subfolders:</p>
+:ET

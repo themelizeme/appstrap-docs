@@ -1,0 +1,29 @@
+I"º<h3 id="replace-the-following-filessnippets">Replace the following files/snippets:</h3>
+
+<ul>
+  <li>Replace: assets/js/ directory</li>
+  <li>Replace: assets/css/* files</li>
+  <li>Replace: theme/gulpfile.js</li>
+  <li>Replace: assets/scss/*</li>
+  <li>Replace: all usage of Font Awesome icons, see: https://fontawesome.com/how-to-use/upgrading-from-4</li>
+  <li>Replace: .progress-bar-sm is now .progress-sm and added to the .progress element</li>
+  <li>Replace: .progress-bar-lg is now .progress-lg and added to the .progress element</li>
+  <li>Replace: .font-BREAKPOINT-xSIZE is now .text-BREAKPOINT-xSIZE</li>
+</ul>
+
+<h3 id="changes">Changes:</h3>
+
+<ul>
+  <li>UPDATED: Updated to Bootstrap 4.0.0!</li>
+  <li>UPDATED: Update to Font Awesome 5! See: https://fontawesome.com/how-to-use/upgrading-from-4</li>
+  <li>UPDATED: Rewrote Javascript into source files to make it easier to remove plugins and customise using Gulp. Donâ€™t want a plugin, just remove it from the js/src/plugins folder</li>
+  <li>UPDATED: Updated highlight.js to 9.12.0</li>
+  <li>UPDATED: Updated jQuery Zoom to 1.7.20</li>
+  <li>UPDATED: Updated imagesLoaded to 4.1.4</li>
+  <li>UPDATED: Updated jquery.nicescroll to 3.7.6</li>
+  <li>UPDATED: Updated .font-BREAKPOINT-xSIZE to .text-BREAKPOINT-xSIZE</li>
+  <li>BUGFIX: Progress bar fixes</li>
+  <li>BUGFIX: Sass fix for duplicate .h-auto &amp; .w-auto classes</li>
+  <li>BUGFIX: Fixed scroll issue on jPanel menu with fixed header</li>
+</ul>
+:ET

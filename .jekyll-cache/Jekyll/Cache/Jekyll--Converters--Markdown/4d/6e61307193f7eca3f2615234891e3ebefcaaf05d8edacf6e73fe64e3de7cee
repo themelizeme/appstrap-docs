@@ -1,0 +1,17 @@
+I"F<p>Small bugfix release.</p>
+
+<h3 id="replace-the-following-filessnippets">Replace the following files/snippets:</h3>
+
+<ul>
+  <li>Replace: assets/css/* files</li>
+  <li>Replace: assets/scss/core/_forms.scss</li>
+  <li>Replace: Fix input-group-btn usage throughout: replace all shop .html files, all one pager .html files, 404.html, features.html, elements-icons.html, header-bottom.html &amp; index-promo-header.html</li>
+</ul>
+
+<h3 id="changes">Changes:</h3>
+
+<ul>
+  <li>BUGFIX: Shop quantity widget fix on mobile</li>
+  <li>BUGFIX: Fix input-group-btn usage throughout</li>
+</ul>
+:ET

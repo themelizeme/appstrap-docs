@@ -1,0 +1,17 @@
+I"D<h3 id="changes">Changes:</h3>
+
+<ul>
+  <li>Upgrade to Bootstrap 4.4.1, see https://github.com/twbs/bootstrap/issues?q=project%3Atwbs%2Fbootstrap%2F18+is%3Aclosed+sort%3Aupdated-desc and https://blog.getbootstrap.com/2019/11/28/bootstrap-4-4-1/ + https://blog.getbootstrap.com/2019/11/26/bootstrap-4-4-0/ for official Bootstrap docs.</li>
+  <li>Upgrade to Fontawesome 5.12.0, see: <a href="http://demos.themelize.me/appstrap3.4/theme/elements-icons-fontawesome.html">elements-icons-fontawesome.html</a></li>
+  <li>NEW: New Bootstrap Icons, see: https://icons.getbootstrap.com/ &amp;&amp; <a href="http://demos.themelize.me/appstrap3.4/theme/elements-icons-bootstrap-icons.html">elements-icons-bootstrap-icons.html</a></li>
+</ul>
+
+<h3 id="replace-the-following-filessnippets">Replace the following files/snippets:</h3>
+
+<ul>
+  <li>Replace: reference to all Bootstrap 4.4.1 CSS and Javascript files in head &amp; footer.</li>
+  <li>Using command line within the /theme folder, run: <code>yarn</code></li>
+  <li>Replace: all .css files in assets/css apart from your custom CSS files.</li>
+</ul>
+
+:ET
