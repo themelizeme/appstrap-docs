@@ -3,7 +3,7 @@
 
 title: AppStrap Docs
 url: "https://github.com/thomjjames/appstrap-docs"
-baseurl:
+baseurl: "/appstrap-docs"
 google_analytics_key:
 show_full_navigation: true
 doc_version: 2.0
