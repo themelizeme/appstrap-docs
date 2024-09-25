@@ -1,2 +1,0 @@
-I"Õ<p>With AppStrap Docsâ€™s new Twig Template Engine helping compile HTML with Gulp you can easily add new content to your main nvarbar without having to directly edit the header.html partial at all. This is done using Twig blocks which are defined regions in a partial which can accept HTML content from the parent page, is no content is defined default content can be shown (as with the main menu) or it can remain blank (as with the navbarSecondaryContent block).</p>
-:ET

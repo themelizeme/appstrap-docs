@@ -1,4 +1,0 @@
-I"\<p>AppStrap is unique in that it loads all plugin assets (.js &amp; .css files) on demand only when the plugin HTML trigger (data-toggle or similar) is present in the page. This gives ease of use and better performance.
-With some CMSs &amp; frameworks which have their own way of serving assets this however can cause issues so to disable this and include plugin assets in pages manually simply add <code>data-plugins-manual=true</code> to the body tag.
-This will still trigger the AppStrap init code which starts plugins but it will assume the plugin assets have been loaded into the page manually.</p>
-:ET

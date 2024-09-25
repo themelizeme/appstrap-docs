@@ -1,8 +1,0 @@
-I"X<p>Sticky header/navbar functionality is enabled by default via the <a href="https://github.com/bbarakaci/fixto">FixTo plugin</a>.</p>
-
-<p>To remove this functionality simply remove the <code>data-toggle="sticky"</code> attribute from your header element or you can config <code class="language-plaintext highlighter-rouge">headerSticky: false</code> to disable it in global settings, pageSettings or Front Matter.</p>
-
-<h3 id="sticky-header-classes">Sticky Header Classes</h3>
-
-<p>See the /theme/header-elements.html file for information on the sticky header classes available within the theme.</p>
-:ET
