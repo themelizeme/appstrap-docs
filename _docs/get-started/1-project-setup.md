@@ -1,7 +1,6 @@
 ---
 title: Project Setup
-category: Get Started
-permalink: /get-started/:title.html
+category: Quickstart
 order: 1
 ---
 

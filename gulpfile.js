@@ -5,7 +5,7 @@ const { exec } = require('child_process');
 const browserSync = require('browser-sync').create();  // Import BrowserSync
 
 const paths = {
-  dist: 'dist'
+  dist: '_site'
 };
 
 // Clean task to clear the dist folder
@@ -26,15 +26,16 @@ gulp.task('docs-build', gulp.series('clean', function(done) {
 
 // Zip task after building
 gulp.task('docs-zip', gulp.series('docs-build', function() {
+  const zipFileName = 'appstrap-docs.zip'; // Set the desired zip file name here
   console.log('Starting zip task...');
   return gulp.src(paths.dist + '/**/*')
-    .pipe(zip(paths.dist + '.zip'))
+    .pipe(zip(zipFileName))  // Specify the custom zip file name
     .on('error', function(err) {
       console.error('Zip error:', err.message);
     })
-    .pipe(gulp.dest('.'))
+    .pipe(gulp.dest('.'))  // Save zip file in the current directory
     .on('end', function() {
-      console.log('Zip task completed.');
+      console.log('Zip task completed. Zip file created:', zipFileName);
     });
 }));
 
