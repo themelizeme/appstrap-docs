@@ -25,11 +25,11 @@
 <meta property="og:url" content="https://github.com/thomjjames/appstrap-docs/appstrap-docs/get-started/1-project-setup.html" />
 <meta property="og:site_name" content="AppStrap Docs" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-09-25T13:05:21+00:00" />
+<meta property="article:published_time" content="2024-09-26T08:11:33+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Project Setup" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","author":{"@type":"Person","name":"Themelize.me"},"dateModified":"2024-09-25T13:05:21+00:00","datePublished":"2024-09-25T13:05:21+00:00","description":"Gulp Setup and Tasks Documentation","headline":"Project Setup","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://github.com/thomjjames/appstrap-docs/appstrap-docs/favicons/android-chrome-144x144.png"},"name":"Themelize.me"},"url":"https://github.com/thomjjames/appstrap-docs/appstrap-docs/get-started/1-project-setup.html"}</script>
+{"@context":"https://schema.org","@type":"Article","author":{"@type":"Person","name":"Themelize.me"},"dateModified":"2024-09-26T08:11:33+00:00","datePublished":"2024-09-26T08:11:33+00:00","description":"Gulp Setup and Tasks Documentation","headline":"Project Setup","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://github.com/thomjjames/appstrap-docs/appstrap-docs/favicons/android-chrome-144x144.png"},"name":"Themelize.me"},"url":"https://github.com/thomjjames/appstrap-docs/appstrap-docs/get-started/1-project-setup.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -257,7 +257,7 @@
 						<div class="page-header">
 							<h2>Get Started</h2>
 							<h3 class="position-relative">Project Setup</h3>
-							 <h4 class="block fs-5 badge bg-primary text-white">September 25, 2024</h4>
+							
 						</div>
 						<article class="content">
 							<h2 id="gulp-setup-and-tasks-documentation">Gulp Setup and Tasks Documentation</h2>
@@ -270,29 +270,82 @@
 
 <h3 id="1-install-dependencies">1) Install dependencies</h3>
 
-<p>Before using Gulp, ensure you’ve installed all necessary dependencies:</p>
+<p>Before using Gulp, ensure you’ve installed all necessary dependencies.</p>
 
-<figure class="highlight"><pre><code class="language-ssh" data-lang="ssh"><span class="k">yarn</span> install</code></pre></figure>
+<p>We use <a href="https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating" target="_blank">Node Version Manager (NVM)</a> to ensure the right Node.js version is used &amp; compatible with our build process. To install it type the following command in Terminal or check out the <a href="https://nodejs.org/en/download/package-manager" target="_blank">instructions on nodejs.org</a>:</p>
+
+<figure class="highlight"><pre><code class="language-ssh" data-lang="ssh"><span class="c1"># installs nvm (Node Version Manager)</span>
+<span class="k">curl</span> -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+
+<span class="c1"># download and install Node.js (you may need to restart the terminal)</span>
+<span class="k">nvm</span> install
+
+<span class="c1"># verifies the right Node.js version is in the environment</span>
+<span class="k">node</span> -v <span class="c1"># should print `v20.17.0`</span>
+
+<span class="c1"># verifies the right npm version is in the environment</span>
+<span class="k">npm</span> -v <span class="c1"># should print `10.8.2`</span></code></pre></figure>
+
+<p>NVM reads the hidden <code class="language-plaintext highlighter-rouge">.nvmrc</code> file in the theme bundle to get the right Node version (currently ``) so you can type <code class="language-plaintext highlighter-rouge">nvm use</code> and your environment is ready to build.</p>
+
+<blockquote>
+  <p>We use yarn instead of NPM but you can use both, to install Yarn run the command <code>npm install --global yarn</code>.</p>
+</blockquote>
+
+<p>With NVM installed you can install the dependencies either with NPM or Yarn:</p>
+
+<figure class="highlight"><pre><code class="language-ssh" data-lang="ssh"><span class="k">npm</span> install
+
+<span class="c1"># OR</span>
+
+<span class="k">yarn</span> install</code></pre></figure>
 
 <p>Once installed, you’ll see a new directory called <code>./node_modules</code> which contains all the code dependencies needed to build your theme.</p>
+
+<blockquote>
+  <p>NOTE: As packages evolve and change you may see some deprecation warnings when installing dependencies, we do our best to update packages as often as possible but sometimes dependencies are embedded deep into another package so we often have to wait for a package to be updated. In most cases you can ignore the warnings.</p>
+</blockquote>
 
 <p>You can now start running Gulp tasks using the following commands.</p>
 
 <h3 id="2-create-a-new-project">2) Create a new project</h3>
 
-<p>As of AppStrap 4.x you can now create unlimited projects within the theme all with there own different source code (/src) and configurations (config.PROJECT.js) and keep them as separate projects and sites.</p>
+<p>As of AppStrap 4.x you can now create unlimited projects within the theme all with there own different source code (/src) and configurations (config.PROJECT.js) and keep them as separate projects and sites. 
+This makes AppStrap function like a basic static site generator!</p>
 
-<p>NOTE: Using projects is our recommended approach to using the theme although if you are not interested in future updates and just want to use the theme as a starting point for your own development then you can skip this step. This will mean to directly edit the files within ./src and your compile HTML, CSS &amp; Javascript will be compiled into the root ./dist directory.</p>
+<blockquote>
+  <p>NOTE: Using projects is our recommended approach to using the theme although if you are not interested in future updates and just want to use the theme as a starting point for your own development then you can skip this step. This will mean to directly edit the files within ./src and your compile HTML, CSS &amp; Javascript will be compiled into the root ./dist directory.</p>
+</blockquote>
 
 <p>To create a new project simply run:</p>
 
-<figure class="highlight"><pre><code class="language-ssh" data-lang="ssh"><span class="k">yarn</span> gulp create-project --name=YOURPROJECTNAME</code></pre></figure>
+<figure class="highlight"><pre><code class="language-ssh" data-lang="ssh"><span class="k">gulp</span> create-project --name=YOURPROJECTNAME</code></pre></figure>
 
 <p><code class="language-plaintext highlighter-rouge">YOURPROJECTNAME</code> should be a machine name without spaces and special characters ie. <code class="language-plaintext highlighter-rouge">themelize_me</code> or <code class="language-plaintext highlighter-rouge">appstrap_theme</code>.</p>
 
 <p>When the command is successful you’ll see a summary of the new project like below:</p>
 
-<figure class="highlight"><pre><code class="language-ssh" data-lang="ssh"><span class="k">yarn</span> gulp create-project --name=YOURPROJECTNAME</code></pre></figure>
+<figure class="highlight"><pre><code class="language-ssh" data-lang="ssh"><span class="k">gulp</span> create-project --name=myproject
+<span class="err">[</span><span class="k">07</span>:11:22] Using gulpfile ~/XXX/src/theme/gulpfile.js
+<span class="err">[</span><span class="k">07</span>:11:22] Starting 'create-project'...
+<span class="k">INFO</span>: Created project directory: /XXX/src/theme/projects/myproject
+<span class="k">INFO</span>: Copied SCSS file: _custom.maps.scss
+<span class="k">INFO</span>: Copied SCSS file: _custom.style.scss
+<span class="k">INFO</span>: Copied SCSS file: _custom.variables.scss
+<span class="k">INFO</span>: Copied SCSS file: theme.style.scss
+<span class="k">INFO</span>: Copied ./src to /XXX/src/theme/projects/myproject/src
+<span class="k">INFO</span>: Created prettified config file: /XXX/src/theme/projects/myproject/config.myproject.js
+
+<span class="k">Project</span> created successfully!
+
+<span class="k">The</span> project directory is: projects/myproject
+<span class="k">The</span> project config can be found at: projects/myproject/config.myproject.js
+
+<span class="k">You</span> can now use the following commands to build your project:
+<span class="err">$</span> <span class="k">yarn</span> gulp --project=myproject
+<span class="err">$</span> <span class="k">yarn</span> gulp build --project=myproject
+
+<span class="err">[</span><span class="k">07</span>:11:23] Finished 'create-project' after <span class="m">1</span>.1 s</code></pre></figure>
 
 <p>Your new project directory is now created with <code class="language-plaintext highlighter-rouge">./projects/YOURPROJECTNAME</code> with the following structure:</p>
 
@@ -306,24 +359,40 @@
 
 <p>Gulp tasks automate different parts of your workflow, such as compiling SCSS, optimizing JavaScript, and preparing files for deployment. The main commands you’ll focus on are:</p>
 
-<h3 id="a-yarn-gulp">A. <code class="language-plaintext highlighter-rouge">yarn gulp</code></h3>
+<h3 id="a-gulp">A. <code class="language-plaintext highlighter-rouge">gulp</code></h3>
 
 <p>This command runs the primary development tasks. It compiles your SCSS files into CSS, processes JavaScript files, and handles HTML compilation. It also watches for any file changes and uses BrowserSync to automatically refresh the browser, making it ideal for live development.</p>
 
-<figure class="highlight"><pre><code class="language-ssh" data-lang="ssh"><span class="k">yarn</span> gulp --project=YOURPROJECTNAME</code></pre></figure>
+<figure class="highlight"><pre><code class="language-ssh" data-lang="ssh"><span class="k">gulp</span> --project=YOURPROJECTNAME</code></pre></figure>
 
-<h3 id="b-yarn-gulp-build">B. <code class="language-plaintext highlighter-rouge">yarn gulp build</code></h3>
+<h3 id="b-gulp-build">B. <code class="language-plaintext highlighter-rouge">gulp build</code></h3>
 
-<p>The <code class="language-plaintext highlighter-rouge">yarn gulp build</code> command prepares your files for production. It performs all the tasks from the development workflow but also adds additional steps to clean out unused assets and optimize the output.</p>
+<p>The <code class="language-plaintext highlighter-rouge">gulp build</code> command prepares your files for production. It performs all the tasks from the development workflow but also adds additional steps to clean out unused assets and optimize the output.</p>
 
 <ul>
   <li><strong>SCSS Compilation</strong>: Converts SCSS into optimized, minified CSS files.</li>
   <li><strong>JavaScript Processing</strong>: Minifies and optimizes your JavaScript files.</li>
+  <li><strong>Compresses image assets</strong>: squeezes down the file size of any image assets (this can take a few moments if you have a lot of images)</li>
   <li><strong>Unused Asset Cleanup</strong>: Identifies and removes any unused assets or CSS.</li>
-  <li><strong>Build Output</strong>: The production-ready files are stored in the <code class="language-plaintext highlighter-rouge">dist</code> folder and can be uploaded to a web hosting service like <a href="https://www.hostinger.com">Hostinger</a>, an ideal choice for hosting static websites.</li>
+  <li><strong>Build Output</strong>: The production-ready files are stored in the <code class="language-plaintext highlighter-rouge">dist</code> folder and can be uploaded to a web hosting service like <a href="https://www.linode.com/lp/refer/?r=1ec57180eee726a5f1c8641f783b948410845c06">Linode</a> or <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site">Github Page</a>, ideal choices for hosting static websites.</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-ssh" data-lang="ssh"><span class="k">yarn</span> gulp build --project=YOURPROJECTNAME</code></pre></figure>
+<div class="hl-box p-4 mb-5">
+You can control some of these additional steps via your <code>config.PROJECT.js</code> file under <code>buildSettings</code>:
+
+
+<figure class="highlight"><pre><code class="language-ssh" data-lang="ssh"><span class="k">buildSettings</span>: <span class="err">{</span>
+  <span class="k">launchServer</span>: false,
+  <span class="k">unusedCss</span>: true,
+  <span class="k">unusedAssets</span>: true,
+  <span class="k">criticalCss</span>: true, // @todo: coming soon
+<span class="err">}</span></code></pre></figure>
+
+</div>
+
+<p>To run a full production build use the following command:</p>
+
+<figure class="highlight"><pre><code class="language-ssh" data-lang="ssh"><span class="k">gulp</span> build --project=YOURPROJECTNAME</code></pre></figure>
 
 <p>Both <code class="language-plaintext highlighter-rouge">yarn gulp</code> and <code class="language-plaintext highlighter-rouge">yarn gulp build</code> will create a new <code class="language-plaintext highlighter-rouge">./dist</code> or <code class="language-plaintext highlighter-rouge">./projects/YOURPROJECTNAME/dist</code> folder which contains your compile HTML, .css, .js files and assets. You don’t ever need to edit files within the <code class="language-plaintext highlighter-rouge">./dist</code> or <code class="language-plaintext highlighter-rouge">./projects/YOURPROJECTNAME/dist</code> folders.</p>
 
@@ -349,7 +418,7 @@
             <div class="fs-4 lh-sm">
               <div>Theme version: 4.0.0</div>
               <div>Docs version: 2.0</div>
-              <div>Docs updated: 2024-09-25</div>
+              <div>Docs updated: 2024-09-26</div>
             </div>
             <a href="https://themelizeme.github.io/appstrap-docs/docs-dist.zip" class="btn btn-light fs-4 mt-3">Download docs</a>
           </div>
