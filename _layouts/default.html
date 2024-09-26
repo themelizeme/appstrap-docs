@@ -121,7 +121,7 @@
 						<div class="page-header">
 							<h2>{% if page.category %}{{ page.category }}{% else %}{{ site.title }}{% endif %}</h2>
 							<h3 class="position-relative">{{ page.title }}</h3>
-							{% if page.date %} <h4 class="block fs-5 badge bg-primary text-white">{{ page.date | date: "%B %d, %Y" }}</h4>{% endif %}
+							{% if page.date and page.category == 'Changelog' %} <h4 class="block fs-5 badge bg-primary text-white">{{ page.date | date: "%B %d, %Y" }}</h4>{% endif %}
 						</div>
 						<article class="content">
 							{{ content }}
