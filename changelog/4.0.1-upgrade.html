@@ -14,22 +14,22 @@
 
 		<link type="application/atom+xml" rel="alternate" href="https://github.com/thomjjames/appstrap-docs/appstrap-docs/feed.xml" title="AppStrap Docs" />
 		<!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Adding Google fonts | AppStrap Docs</title>
+<title>4.0.1 Upgrade | AppStrap Docs</title>
 <meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="Adding Google fonts" />
+<meta property="og:title" content="4.0.1 Upgrade" />
 <meta name="author" content="Themelize.me" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="With AppStrap Docs’s new config system you can simply use the additionalFonts setting to add the URLs to the fonts you want to add like the following example from our shop HTML pages:" />
-<meta property="og:description" content="With AppStrap Docs’s new config system you can simply use the additionalFonts setting to add the URLs to the fonts you want to add like the following example from our shop HTML pages:" />
-<link rel="canonical" href="https://github.com/thomjjames/appstrap-docs/appstrap-docs/examples/adding-google-fonts.html" />
-<meta property="og:url" content="https://github.com/thomjjames/appstrap-docs/appstrap-docs/examples/adding-google-fonts.html" />
+<meta name="description" content="Changes:" />
+<meta property="og:description" content="Changes:" />
+<link rel="canonical" href="https://github.com/thomjjames/appstrap-docs/appstrap-docs/changelog/4.0.1-upgrade.html" />
+<meta property="og:url" content="https://github.com/thomjjames/appstrap-docs/appstrap-docs/changelog/4.0.1-upgrade.html" />
 <meta property="og:site_name" content="AppStrap Docs" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-09-27T12:47:55+00:00" />
+<meta property="article:published_time" content="2024-09-27T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Adding Google fonts" />
+<meta property="twitter:title" content="4.0.1 Upgrade" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","author":{"@type":"Person","name":"Themelize.me"},"dateModified":"2024-09-27T12:47:55+00:00","datePublished":"2024-09-27T12:47:55+00:00","description":"With AppStrap Docs’s new config system you can simply use the additionalFonts setting to add the URLs to the fonts you want to add like the following example from our shop HTML pages:","headline":"Adding Google fonts","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://github.com/thomjjames/appstrap-docs/appstrap-docs/favicons/android-chrome-144x144.png"},"name":"Themelize.me"},"url":"https://github.com/thomjjames/appstrap-docs/appstrap-docs/examples/adding-google-fonts.html"}</script>
+{"@context":"https://schema.org","@type":"Article","author":{"@type":"Person","name":"Themelize.me"},"dateModified":"2024-09-27T00:00:00+00:00","datePublished":"2024-09-27T00:00:00+00:00","description":"Changes:","headline":"4.0.1 Upgrade","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://github.com/thomjjames/appstrap-docs/appstrap-docs/favicons/android-chrome-144x144.png"},"name":"Themelize.me"},"url":"https://github.com/thomjjames/appstrap-docs/appstrap-docs/changelog/4.0.1-upgrade.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -120,7 +120,7 @@
 									<li class="nav-item top-level">
 										
 										
-										<a href="/appstrap-docs/examples/override-colours.html" class="text-decoration-none current fw-bold">Examples</a>
+										<a href="/appstrap-docs/examples/override-colours.html" class="text-decoration-none ">Examples</a>
 										<ul>
 											
 												<li class="nav-item"><a class="text-decoration-none " href="/appstrap-docs/examples/override-colours.html">Overriding Primary Colours</a></li>
@@ -137,7 +137,7 @@
 											
 												<li class="nav-item"><a class="text-decoration-none " href="/appstrap-docs/examples/pages-in-subfolders.html">Pages in subfolders</a></li>
 											
-												<li class="nav-item"><a class="text-decoration-none current fw-bold" href="/appstrap-docs/examples/adding-google-fonts.html">Adding Google fonts</a></li>
+												<li class="nav-item"><a class="text-decoration-none " href="/appstrap-docs/examples/adding-google-fonts.html">Adding Google fonts</a></li>
 											
 												<li class="nav-item"><a class="text-decoration-none " href="/appstrap-docs/examples/adding-main-navbar-content.html">Adding Main Navbar Content With Twig Blocks</a></li>
 											
@@ -168,11 +168,11 @@
 										
 										
 										
-										<a href="/appstrap-docs/changelog.html" class="text-decoration-none ">Changelog</a>
+										<a href="/appstrap-docs/changelog.html" class="text-decoration-none current fw-bold">Changelog</a>
 										<ul id="changelog">
 											
 												<li class="nav-item">
-													<a href="/appstrap-docs/changelog/4.0.1-upgrade.html" class="text-decoration-none ">4.0.1 Upgrade</a>
+													<a href="/appstrap-docs/changelog/4.0.1-upgrade.html" class="text-decoration-none current fw-bold">4.0.1 Upgrade</a>
 												</li>
 											
 												<li class="nav-item">
@@ -259,36 +259,59 @@
 				<section class="main col-lg-9">
 					<div class="px-lg-5">
 						<div class="page-header">
-							<h2>Examples</h2>
-							<h3 class="position-relative">Adding Google fonts</h3>
-							
+							<h2>Changelog</h2>
+							<h3 class="position-relative">4.0.1 Upgrade</h3>
+							 <h4 class="block fs-5 badge bg-primary text-white">September 27, 2024</h4>
 						</div>
 						<article class="content">
-							<p>With AppStrap Docs’s new config system you can simply use the additionalFonts setting to add the URLs to the fonts you want to add like the following example from our shop HTML pages:</p>
+							<h3 id="changes">Changes:</h3>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html">pageSettings: {
-  'shop': {  // Applies to any page starting with 'shop-'
-    additionalFonts: [// Load additional Google fonts ondemand after the initial page load
-      'https://fonts.googleapis.com/css2?family=SUSE:wght@100..800<span class="err">&amp;</span>display=swap'
-    ],
-    cssVariables: {
-      '--bs-font-sans-serif': '"SUSE", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-    },
-  },
-  'shop-*': {
-    inheritFrom: 'shop'
-  },
-},</code></pre></figure>
+<ul>
+  <li>NEW: <code class="language-plaintext highlighter-rouge">create-project</code> command now supports a <code class="language-plaintext highlighter-rouge">--files</code> option so you can choose which .html files are copied from /src/html to /projects/PROJECT/src/html when creating a project ie. <code class="language-plaintext highlighter-rouge">gulp create-project --name=myProject --files=index.html,about.html</code></li>
+  <li>NEW: <code class="language-plaintext highlighter-rouge">create-project</code> command now supports the <code class="language-plaintext highlighter-rouge">--template=kitchensink</code> which will copy all the parent /src/ assets to your project if you wish to fully customise AppStrap. Ie <code class="language-plaintext highlighter-rouge">gulp create-project --name=myProject --template=kitchensink --files=index.html,contact.html</code></li>
+  <li>NEW: <code class="language-plaintext highlighter-rouge">.animate-pulse-light/dark</code> are now <code class="language-plaintext highlighter-rouge">.animate-pulse-COLOUR</code> support all theme colours, @see elements-animation.html</li>
+  <li>NEW: <code class="language-plaintext highlighter-rouge">timeline-collapse.html</code> example for collapsible timelines</li>
+  <li>NEW: <code class="language-plaintext highlighter-rouge">data-bs-target-active-class</code> &amp; <code class="language-plaintext highlighter-rouge">data-bs-trigger-active-class</code> for Bootstrap collapse elements so you can add classes to the trigger &amp; target on show/hide, @see timeline-collapse.html for example</li>
+  <li>NEW: <code class="language-plaintext highlighter-rouge">nav-track</code> class for admin siebar UL to give line on submenus</li>
+  <li>FIX: index-church cut off content fixed</li>
+  <li>FIX: index-realestate-single broken gallery fixed</li>
+  <li>FIX: <strong>IMPORTANT FOR PROJECT-BASED SITES</strong> - fixed scss file importing for project based setup so SASS includePaths works with ./projects/PROJECT/_custom.*.scss files.
+In your projects <code class="language-plaintext highlighter-rouge">theme.style.scss</code> file
+Replace:</li>
+</ul>
 
-<p>This will add the Google SUSE font as the global font to <code class="language-plaintext highlighter-rouge">shop.html</code> and any pages beginning with <code class="language-plaintext highlighter-rouge">shop-</code>. 
-The <code class="language-plaintext highlighter-rouge">additionalFonts</code> URLs are loaded after the initial page load via Javascript.</p>
+<figure class="highlight"><pre><code class="language-ssh" data-lang="ssh"><span class="err">@</span><span class="k">import</span> "base.scss"<span class="err">;</span></code></pre></figure>
 
-<p>This approach alters the CSS variable <code class="language-plaintext highlighter-rouge">--bs-font-sans-serif</code> to adjust the global base font in the browser. You could also use SASS and update the Bootstrap <code class="language-plaintext highlighter-rouge">$font-family-sans-serif</code> variable in <code class="language-plaintext highlighter-rouge">/src/scss/_variables.custom.scss</code> if you preferred.</p>
+<p>With:</p>
 
-<blockquote>
-  <p>You can also adjust other Bootstrap global CSS variables this way but bare in mind this will only work with basic global properties since Bootstrap uses components to override CSS variables and many Bootstrap colours run through additional SASS functions for lightening, shades or contrasting, see <a href="https://getbootstrap.com/docs/5.3/customize/css-variables/" target="_blank">https://getbootstrap.com/docs/5.3/customize/css-variables/</a> for more information on CSS variables in Bootstrap.</p>
-</blockquote>
+<figure class="highlight"><pre><code class="language-ssh" data-lang="ssh"><span class="err">@</span><span class="k">import</span> "bootstrap/scss/functions"<span class="err">;</span>
 
+<span class="err">//</span> <span class="err">@</span><span class="k">Custom</span> variables
+<span class="err">@</span><span class="k">import</span> "custom.variables.scss"<span class="err">;</span> // Your custom site variables
+<span class="err">@</span><span class="k">import</span> "core/variables.scss"<span class="err">;</span> // Theme variables &amp; overrides
+
+<span class="err">//</span> <span class="err">@</span><span class="k">Bootstrap</span> variables
+<span class="err">@</span><span class="k">import</span> "bootstrap/scss/variables"<span class="err">;</span>
+
+<span class="err">//</span> <span class="err">@</span><span class="k">Custom</span> maps
+<span class="err">@</span><span class="k">import</span> "custom.maps.scss"<span class="err">;</span> // Your custom site variables
+<span class="err">@</span><span class="k">import</span> "core/maps.scss"<span class="err">;</span> // Theme map overrides
+
+<span class="err">//</span> <span class="err">@</span><span class="k">Bootstrap</span> maps
+<span class="err">@</span><span class="k">import</span> "bootstrap/scss/maps"<span class="err">;</span>
+
+<span class="err">//</span> <span class="err">@</span><span class="k">Bootstrap</span> utilities
+<span class="err">@</span><span class="k">import</span> "bootstrap/scss/utilities"<span class="err">;</span>
+
+<span class="err">//</span> <span class="err">@</span><span class="k">Custom</span> utilities overrides - after Bootstrap to override existing as needed
+<span class="err">@</span><span class="k">import</span> "core/utilities.scss"<span class="err">;</span> // Theme utilities overrides
+
+<span class="err">//</span> <span class="k">Mixins</span>
+<span class="err">@</span><span class="k">import</span> "bootstrap/scss/mixins"<span class="err">;</span>
+<span class="err">@</span><span class="k">import</span> "core/mixins.scss"<span class="err">;</span>
+
+<span class="err">//</span> <span class="k">Bootstrap</span> files
+<span class="err">@</span><span class="k">import</span> "bootstrap/scss/bootstrap"<span class="err">;</span></code></pre></figure>
 
 						</article>
 					</div>

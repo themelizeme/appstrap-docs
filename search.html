@@ -171,6 +171,10 @@
 										<ul id="changelog">
 											
 												<li class="nav-item">
+													<a href="/appstrap-docs/changelog/4.0.1-upgrade.html" class="text-decoration-none ">4.0.1 Upgrade</a>
+												</li>
+											
+												<li class="nav-item">
 													<a href="/appstrap-docs/changelog/4.0.0-upgrade.html" class="text-decoration-none ">4.0.0 Upgrade</a>
 												</li>
 											
@@ -576,6 +580,23 @@
 					,
 					
 
+					"changelog-4-0-1-upgrade-html": {
+						"id": "changelog-4-0-1-upgrade-html",
+						"title": "4.0.1 Upgrade",
+						"category": "",
+						"url": " /changelog/4.0.1-upgrade.html",
+						"content": "Changes: NEW: create-project command now supports a --files option so you can choose which .html files are copied from src html to projects PROJECT src html when creating a project ie. gulp create-project --name=myProject --files=index.html,about.html NEW: create-project command now supports the --template=kitchensink which will copy all the parent src assets to your project if you wish to fully customise AppStrap. Ie gulp create-project --name=myProject --template=kitchensink --files=index.html,contact.html NEW: .animate-pulse-light dark are now .animate-pulse-COLOUR support all theme colours, @see elements-animation.html NEW: timeline-collapse.html example for collapsible timelines NEW: data-bs-target-active-class &amp; data-bs-trigger-active-class for Bootstrap collapse elements so you can add classes to the trigger &amp; target on show hide, @see timeline-collapse.html for example NEW: nav-track class for admin siebar UL to give line on submenus FIX: index-church cut off content fixed FIX: index-realestate-single broken gallery fixed FIX: IMPORTANT FOR PROJECT-BASED SITES - fixed scss file importing for project based setup so SASS includePaths works with . projects PROJECT _custom.*.scss files. In your projects theme.style.scss file Replace: @import \"base.scss\"; With: @import \"bootstrap scss functions\"; @Custom variables @import \"custom.variables.scss\"; Your custom site variables @import \"core variables.scss\"; Theme variables &amp; overrides @Bootstrap variables @import \"bootstrap scss variables\"; @Custom maps @import \"custom.maps.scss\"; Your custom site variables @import \"core maps.scss\"; Theme map overrides @Bootstrap maps @import \"bootstrap scss maps\"; @Bootstrap utilities @import \"bootstrap scss utilities\"; @Custom utilities overrides - after Bootstrap to override existing as needed @import \"core utilities.scss\"; Theme utilities overrides Mixins @import \"bootstrap scss mixins\"; @import \"core mixins.scss\"; Bootstrap files @import \"bootstrap scss bootstrap\";"
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
 					"examples-adding-google-fonts-html": {
 						"id": "examples-adding-google-fonts-html",
 						"title": "Adding Google fonts",
@@ -768,7 +789,7 @@
 						"title": "Theme info",
 						"category": "",
 						"url": " /general/theme-info.html",
-						"content": "Name: AppStrap Bootstrap 5 Theme Version 4.0.0 Created: Jan 2013 Updated: Sept 25 2024 Bootstrap version: 5.3.3 Theme Credits Slideshow graphics: http: medialoot.com &amp; http: www.premiumpixels.com Team photos: http: www.flickr.com photos vectorportal sets 72157622868867274 Blog photos: http: www.flickr.com photos xjrlokix (Ben Fredericson) Patterns: http: subtlepatterns.com Backstretch photos: http: unsplash.com About me photo: https: www.flickr.com photos anseledwardsphotography Flag icons: http: lipis.github.io flag-icon-css Card photos: https: picjumbo.com Shop &amp; other photos: https: unsplash.com Loading graphics plugin: http: joaopereirawd.github.io fakeLoader.js Videos: https: www.youtube.com watch?v=qOfuTI5165w Videos &amp; photos: https: pixabay.com Photos: pexels.com Photos: stocksnap.io Icons made by Freepik from www.flaticon.com is licensed by CC 3.0 BY Icons made by Vectors Market from www.flaticon.com is licensed by CC 3.0 BY"
+						"content": "Name: AppStrap Bootstrap 5 Theme Version 4.0.1 Created: Jan 2013 Updated: Sept 27 2024 Bootstrap version: 5.3.3 Theme Credits Slideshow graphics: http: medialoot.com &amp; http: www.premiumpixels.com Team photos: http: www.flickr.com photos vectorportal sets 72157622868867274 Blog photos: http: www.flickr.com photos xjrlokix (Ben Fredericson) Patterns: http: subtlepatterns.com Backstretch photos: http: unsplash.com About me photo: https: www.flickr.com photos anseledwardsphotography Flag icons: http: lipis.github.io flag-icon-css Card photos: https: picjumbo.com Shop &amp; other photos: https: unsplash.com Loading graphics plugin: http: joaopereirawd.github.io fakeLoader.js Videos: https: www.youtube.com watch?v=qOfuTI5165w Videos &amp; photos: https: pixabay.com Photos: pexels.com Photos: stocksnap.io Icons made by Freepik from www.flaticon.com is licensed by CC 3.0 BY Icons made by Vectors Market from www.flaticon.com is licensed by CC 3.0 BY"
 					}
 
 					
@@ -859,9 +880,9 @@
         <div class="row align-items-center">
           <div class="col-lg-6 text-lg-start text-center mb-3 mb-lg-0">
             <div class="fs-4 lh-sm">
-              <div>Theme version: 4.0.0</div>
+              <div>Theme version: 4.0.1</div>
               <div>Docs version: 2.0</div>
-              <div>Docs updated: 2024-09-26</div>
+              <div>Docs updated: 2024-09-27</div>
             </div>
             <a href="https://themelizeme.github.io/appstrap-docs/appstrap-docs.zip" class="btn btn-light fs-4 mt-3">Download docs</a>
           </div>
